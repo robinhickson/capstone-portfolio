@@ -1,0 +1,42 @@
+/* ============================================= */
+
+
+/*              Variables                     */
+
+
+/* ============================================= */
+
+//variable colors
+$primary-color: rgb(32, 13, 100, .8);
+$secondary-color:rgba(119,119,119, .6);
+
+$error: #e4757a;
+$info: #927bc1;
+$warning: #fd7856;
+$success: #63cc82;
+//lighten button colors
+$primary-color-light: lighten(rgba(30, 10, 105, .8), 30%);
+$secondary-color-light: lighten(rgba(119,119,119,0.6), 40%);
+//standard colors
+$white: whitesmoke;
+
+/*              Typography Variables             */
+
+
+/* ============================================= */
+
+$primary-font: 'Lato',
+sans-serif;
+$font-light: 300;
+$font-bold: 700;
+
+
+/*              Others                            */
+
+
+/* ============================================= */
+
+//breakpoints
+$breakpointTablet: 768px;
+//breakpoints
+$breakpointDesktop: 1024px;
