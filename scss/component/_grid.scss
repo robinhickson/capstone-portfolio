@@ -2,6 +2,42 @@
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
+
+
+
+.mainGrid{
+  display: grid;
+  grid-template-columns: repeat(8, minMax(10px, 1fr));
+  grid-template-rows: repeat(8, minMax(10px, 1fr));
+  margin: 0 auto;
+  border: solid 1px black;
+  height: 100vh;
+  width: 100vh;
+}
+
+.mainGrid >div::before {
+  
+  content:"";
+  padding-bottom: 100%;
+  display: block;
+
+}
+
 //Nested grids
+
+.mainGrid > div{
+  display: grid;
+}
+
+
+.mainGrid >div::before, .mainGrid > div > #n1, .mainGrid > div > #o1, .mainGrid > div > #t1, .mainGrid > div > #e1, .mainGrid > div > #v1, .mainGrid > div > #e2,
+.mainGrid > div > #r1, .mainGrid > div > #y,.mainGrid > div > #t2, .mainGrid > div > #h1, .mainGrid > div > #i1, .mainGrid > div > #n2, .mainGrid > div > #g,
+.mainGrid > div > #i2,.mainGrid > div > #s, .mainGrid > div > #b, .mainGrid > div > #l, .mainGrid > div > #a, .mainGrid > div > #c, .mainGrid > div > #k,
+.mainGrid > div > #o2, .mainGrid > div > #r2, .mainGrid > div > #w, .mainGrid > div > #h2, .mainGrid > div > #i3, .mainGrid > div > #t3, .mainGrid > div > #e3{
+  grid-area: 1/1/2/2;
+ 
+
+}
+
 
 

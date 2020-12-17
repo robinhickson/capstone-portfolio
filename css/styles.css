@@ -1,0 +1,955 @@
+/* ============================================= */
+/*              Variables                     */
+/* ============================================= */
+/*              Typography Variables             */
+/* ============================================= */
+/*              Others                            */
+/* ============================================= */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+* {
+  font-family: "Lato", sans-serif;
+  color: rgba(119, 119, 119, 0.6);
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.45em;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 5px;
+}
+
+h1 {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 5px;
+}
+
+h2 {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  color: rgba(32, 13, 100, 0.8);
+}
+
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(8, minMax(10px, 1fr));
+  grid-template-rows: repeat(8, minMax(10px, 1fr));
+  margin: 0 auto;
+  border: solid 1px black;
+  height: 100vh;
+  width: 100vh;
+}
+
+.mainGrid > div::before {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+
+.mainGrid > div {
+  display: grid;
+}
+
+.mainGrid > div::before, .mainGrid > div > #n1, .mainGrid > div > #o1, .mainGrid > div > #t1, .mainGrid > div > #e1, .mainGrid > div > #v1, .mainGrid > div > #e2,
+.mainGrid > div > #r1, .mainGrid > div > #y, .mainGrid > div > #t2, .mainGrid > div > #h1, .mainGrid > div > #i1, .mainGrid > div > #n2, .mainGrid > div > #g,
+.mainGrid > div > #i2, .mainGrid > div > #s, .mainGrid > div > #b, .mainGrid > div > #l, .mainGrid > div > #a, .mainGrid > div > #c, .mainGrid > div > #k,
+.mainGrid > div > #o2, .mainGrid > div > #r2, .mainGrid > div > #w, .mainGrid > div > #h2, .mainGrid > div > #i3, .mainGrid > div > #t3, .mainGrid > div > #e3 {
+  grid-area: 1/1/2/2;
+}
+
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+.a8, .c8, .e8, .g8, .b7, .d7, .f7, .h7, .a6, .c6, .e6, .g6, .b5, .d5, .f5, .h5, .a4, .c4, .e4, .g4, .b3, .d3, .f3, .h3, .a2, .c2, .e2, .g2, .b1, .d1, .f1, .h1 {
+  background-color: white;
+}
+
+.b8, .d8, .f8, .h8, .a7, .c7, .e7, .g7, .b6, .d6, .f6, .h6, .a5, .c5, .e5, .g5, .b4, .d4, .f4, .h4, .a3, .c3, .e3, .g3, .b2, .d2, .f2, .h2, .a1, .c1, .e1, .g1 {
+  background-color: black;
+}
+
+/* ============================================= */
+/*              Forms                            */
+/* ============================================= */
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+#n1 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 325.4366455078;
+  stroke-dashoffset: 325.4366455078;
+  animation: n1Animate 0.4s 0.2s linear forwards, n1Fill 0.4s 0.6s linear forwards;
+}
+
+@keyframes n1Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes n1Fill {
+  0% {
+    fill: #e9e9e9;
+  }
+  25% {
+    fill: #f0afaf;
+  }
+  50% {
+    fill: #ee5353;
+  }
+  75% {
+    fill: #f32424;
+  }
+  100% {
+    fill: red;
+  }
+}
+#o1 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 277.8965759277;
+  stroke-dashoffset: 277.8965759277;
+  animation: o1Animate 0.4s 0.6s linear forwards, o1Fill 0.4s 1s linear forwards;
+}
+
+@keyframes o1Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes o1Fill {
+  0% {
+    fill: #fafaf9;
+  }
+  25% {
+    fill: #f7e8cd;
+  }
+  50% {
+    fill: #f5c773;
+  }
+  75% {
+    fill: #fab027;
+  }
+  100% {
+    fill: orange;
+  }
+}
+#t1 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: t1Animate 0.4s 1s linear forwards, t1Fill 0.4s 1.4s linear forwards;
+}
+
+@keyframes t1Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes t1Fill {
+  0% {
+    fill: #fafaf7;
+  }
+  25% {
+    fill: #f7f7c4;
+  }
+  50% {
+    fill: #fafa76;
+  }
+  75% {
+    fill: #fafa2e;
+  }
+  100% {
+    fill: yellow;
+  }
+}
+#e1 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 310.6152954102;
+  stroke-dashoffset: 310.6152954102;
+  animation: e1Animate 0.4s 1.4s linear forwards, e1Fill 0.4s 1.8s linear forwards;
+}
+
+@keyframes e1Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes e1Fill {
+  0% {
+    fill: #858585;
+  }
+  25% {
+    fill: #738f73;
+  }
+  50% {
+    fill: #428842;
+  }
+  75% {
+    fill: #168516;
+  }
+  100% {
+    fill: green;
+  }
+}
+#v1 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 226.5550689697;
+  stroke-dashoffset: 226.5550689697;
+  animation: v1Animate 0.4s 1.8s linear forwards, v1Fill 0.4s 2.2s linear forwards;
+}
+
+@keyframes v1Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes v1Fill {
+  0% {
+    fill: #f3f3f7;
+  }
+  25% {
+    fill: #c2c2f5;
+  }
+  50% {
+    fill: #7676f8;
+  }
+  75% {
+    fill: #3d3dfa;
+  }
+  100% {
+    fill: blue;
+  }
+}
+#e2 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 310.6152954102;
+  stroke-dashoffset: 310.6152954102;
+  animation: e2Animate 0.4s 2.2s linear forwards, e2Fill 0.4s 2.6s linear forwards;
+}
+
+@keyframes e2Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes e2Fill {
+  0% {
+    fill: #89898a;
+  }
+  25% {
+    fill: #82768b;
+  }
+  50% {
+    fill: #694385;
+  }
+  75% {
+    fill: #5b1c88;
+  }
+  100% {
+    fill: indigo;
+  }
+}
+#r1 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 319.9508361816;
+  stroke-dashoffset: 319.9508361816;
+  animation: r1Animate 0.4s 2.6s linear forwards, r1Fill 0.4s 3s linear forwards;
+}
+
+@keyframes r1Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes r1Fill {
+  0% {
+    fill: #f7f4f7;
+  }
+  25% {
+    fill: #f7c3f7;
+  }
+  50% {
+    fill: violet;
+  }
+  75% {
+    fill: #f141f1;
+  }
+  100% {
+    fill: #f50bf5;
+  }
+}
+#y {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 198.1955566406;
+  stroke-dashoffset: 198.1955566406;
+  animation: vAnimate 0.4s 3s linear forwards, n1Fill 0.4s 3.4s linear forwards;
+}
+
+@keyframes vAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#t2 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: t2Animate 0.5s 3.4s linear forwards, o1Fill 0.4s 3.9s linear forwards;
+}
+
+@keyframes t2Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes t2Fill {
+  100% {
+    fill: orange;
+  }
+}
+#h1 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 288.6000061035;
+  stroke-dashoffset: 288.6000061035;
+  animation: h1Animate 0.4s 3.9s linear forwards, t1Fill 0.4s 4.3s linear forwards;
+}
+
+@keyframes h1Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#i1 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  animation: i1Animate 0.4s 4.3s linear forwards, e1Fill 0.4s 4.7s linear forwards;
+}
+
+@keyframes i1Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#n2 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 325.4366455078;
+  stroke-dashoffset: 325.4366455078;
+  animation: n2Animate 0.4s 4.7s linear forwards, v1Fill 0.4s 5.1s linear forwards;
+}
+
+@keyframes n2Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#g {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 301.6268005371;
+  stroke-dashoffset: 301.6268005371;
+  animation: gAnimate 0.4s 5.1s linear forwards, e2Fill 0.4s 5.5s linear forwards;
+}
+
+@keyframes gAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#i2 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  animation: i2Animate 0.4s 5.5s linear forwards, r1Fill 0.4s 5.9s linear forwards;
+}
+
+@keyframes i2Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#s {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 289.3076477051;
+  stroke-dashoffset: 289.3076477051;
+  animation: sAnimate 0.4s 5.9s linear forwards, n1Fill 0.4s 6.3s linear forwards;
+}
+
+@keyframes sAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#b {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 360.0515136719;
+  stroke-dashoffset: 360.0515136719;
+  animation: bAnimate 0.4s 6.3s linear forwards, o1Fill 0.4s 6.7s linear forwards;
+}
+
+@keyframes bAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#l {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: lAnimate 0.4s 6.7s linear forwards, t1Fill 0.4s 7.1s linear forwards;
+}
+
+@keyframes lAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#a {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 257.3144836426;
+  stroke-dashoffset: 257.3144836426;
+  animation: aAnimate 0.4s 7.1s linear forwards, e1Fill 0.4s 7.5s linear forwards;
+}
+
+@keyframes aAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#c {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 237.9977722168;
+  stroke-dashoffset: 237.9977722168;
+  animation: cAnimate 0.4s 7.5s linear forwards, v1Fill 0.4s 7.9s linear forwards;
+}
+
+@keyframes cAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#k {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 280.997253418;
+  stroke-dashoffset: 280.997253418;
+  animation: kAnimate 0.4s 7.9s linear forwards, e2Fill 0.4s 8.3s linear forwards;
+}
+
+@keyframes kAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#o2 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 277.8965759277;
+  stroke-dashoffset: 277.8965759277;
+  animation: o2Animate 0.4s 8.3s linear forwards, r1Fill 0.4s 8.7s linear forwards;
+}
+
+@keyframes o2Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#r2 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 319.9508361816;
+  stroke-dashoffset: 319.9508361816;
+  animation: r2Animate 0.4s 8.7s linear forwards, n1Fill 0.4s 9.1s linear forwards;
+}
+
+@keyframes r2Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#w {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 389.9555358887;
+  stroke-dashoffset: 389.9555358887;
+  animation: wAnimate 0.4s 9.1s linear forwards, o1Fill 0.4s 9.5s linear forwards;
+}
+
+@keyframes wAnimate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#h2 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 288.6000061035;
+  stroke-dashoffset: 288.6000061035;
+  animation: h2Animate 0.4s 9.5s linear forwards, t1Fill 0.4s 9.9s linear forwards;
+}
+
+@keyframes h2Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#i3 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  animation: i3Animate 0.4s 9.9s linear forwards, e1Fill 0.4s 10.3s linear forwards;
+}
+
+@keyframes i3Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#t3 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: t3Animate 0.4s 10.3s linear forwards, v1Fill 0.4s 10.7s linear forwards;
+}
+
+@keyframes t3Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#e3 {
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 310.6152954102;
+  stroke-dashoffset: 310.6152954102;
+  animation: e3Animate 0.4s 10.7s linear forwards, e2Fill 0.4s 11.1s linear forwards;
+}
+
+@keyframes e3Animate {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+
+/*# sourceMappingURL=styles.css.map */

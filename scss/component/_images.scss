@@ -2,3 +2,730 @@
 /* ============================================= */
 /*              Images                           */
 /* ============================================= */
+
+
+/// n
+
+#n1{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 325.4366455078125;
+  stroke-dashoffset: 325.4366455078125;
+
+  animation: n1Animate 0.4s 0.2s linear forwards, n1Fill 0.4s .6s linear forwards;
+
+}
+
+
+@keyframes n1Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes n1Fill{
+
+  0%{
+    fill: rgb(233, 233, 233);
+  }
+
+  25%{
+    fill: rgb(240, 175, 175);
+  }
+
+  50%{
+    fill: rgb(238, 83, 83);
+  }
+
+  75%{
+    fill: rgb(243, 36, 36);
+  }
+
+  100%{
+    fill: red;
+  }
+}
+
+
+//  o1
+
+
+#o1{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 277.8965759277344;
+  stroke-dashoffset: 277.8965759277344;
+
+  animation: o1Animate 0.4s 0.6s linear forwards, o1Fill 0.4s 1s linear forwards;
+
+}
+
+@keyframes o1Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes o1Fill{
+  0%{
+    fill: rgb(250, 250, 249);
+  
+  }
+
+  25%{
+    fill: rgb(247, 232, 205);
+
+  }
+  50%{
+    fill: rgb(245, 199, 115);
+
+  }
+  75%{
+    fill: rgb(250, 176, 39);
+
+  }
+
+  100%{
+    fill: orange;
+    
+  }
+
+}
+
+
+
+//t1
+#t1{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+
+  animation: t1Animate 0.4s 1s linear forwards, t1Fill 0.4s 1.4s linear forwards;
+
+}
+
+@keyframes t1Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes t1Fill{
+  0%{
+    fill: rgb(250, 250, 247);
+  
+  }
+
+  25%{
+    fill: rgb(247, 247, 196);
+
+  }
+  50%{
+    fill:rgb(250, 250, 118);
+
+  }
+  75%{
+    fill: rgb(250, 250, 46);
+
+  }
+
+  100%{
+    fill: yellow;
+    
+  }
+}
+
+
+
+//e
+
+#e1{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 310.61529541015625;
+  stroke-dashoffset: 310.61529541015625;
+
+  animation: e1Animate 0.4s 1.4s linear forwards, e1Fill 0.4s 1.8s linear forwards;
+
+}
+
+@keyframes e1Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes e1Fill{
+  0%{
+    fill: rgb(133, 133, 133);
+  
+  }
+
+  25%{
+    fill: rgb(115, 143, 115);
+
+  }
+  50%{
+    fill:rgb(66, 136, 66);
+
+  }
+  75%{
+    fill: rgb(22, 133, 22);
+
+  }
+  100%{
+    fill: green;
+  }
+}
+
+
+//v
+
+#v1{
+  stroke: black;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 226.55506896972656;
+  stroke-dashoffset: 226.55506896972656;
+
+  animation: v1Animate 0.4s 1.8s linear forwards,v1Fill 0.4s 2.2s linear forwards;
+  
+}
+
+@keyframes v1Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes v1Fill{
+  0%{
+    fill: rgb(243, 243, 247);
+  
+  }
+
+  25%{
+    fill: rgb(194, 194, 245);
+
+  }
+  50%{
+    fill:rgb(118, 118, 248);
+
+  }
+  75%{
+    fill: rgb(61, 61, 250);
+
+  }
+  100%{
+    fill: blue;
+  }
+}
+
+//e2
+
+#e2{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 310.61529541015625;
+  stroke-dashoffset: 310.61529541015625;
+
+  animation: e2Animate 0.4s 2.2s linear forwards, e2Fill 0.4s 2.6s linear forwards;
+
+}
+
+@keyframes e2Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes e2Fill{
+  0%{
+    fill: rgb(137, 137, 138);
+  
+  }
+
+  25%{
+    fill: rgb(130, 118, 139);
+
+  }
+  50%{
+    fill: rgb(105, 67, 133);
+
+  }
+  75%{
+    fill: rgb(91, 28, 136);
+
+  }
+  100%{
+    fill: indigo;
+  }
+}
+
+
+//r1
+
+#r1{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 319.9508361816406;
+  stroke-dashoffset: 319.9508361816406;
+
+  animation: r1Animate .4s 2.6s linear forwards, r1Fill 0.4s 3s linear forwards;
+
+}
+
+@keyframes r1Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes r1Fill{
+
+
+  0%{
+    fill: rgb(247, 244, 247);
+  }
+  25%{
+    fill: rgb(247, 195, 247);
+  }
+50%{
+    fill: violet;
+  }
+  75%{
+    fill: rgb(241, 65, 241);
+  }
+  100%{
+    fill: rgb(245, 11, 245);
+  }
+}
+
+
+//y
+
+#y{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 198.195556640625;
+  stroke-dashoffset: 198.195556640625;
+
+  animation: vAnimate 0.4s 3s linear forwards, n1Fill 0.4s 3.4s linear forwards;
+
+}
+
+@keyframes vAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+//t2
+
+#t2{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+
+  animation: t2Animate 0.5s 3.4s linear forwards, o1Fill 0.4s 3.9s linear forwards;
+
+}
+
+@keyframes t2Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes t2Fill{
+  100%{
+    fill: orange;
+  }
+}
+
+
+//h1
+
+#h1{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 288.6000061035156;
+  stroke-dashoffset: 288.6000061035156;
+
+  animation: h1Animate 0.4s 3.9s linear forwards, t1Fill 0.4s 4.3s linear forwards;
+
+}
+
+@keyframes h1Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+//i1
+
+#i1{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+
+  animation: i1Animate 0.4s 4.3s linear forwards, e1Fill 0.4s 4.7s linear forwards;
+
+}
+
+@keyframes i1Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// n2
+
+#n2{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 325.4366455078125;
+  stroke-dashoffset: 325.4366455078125;
+
+  animation: n2Animate 0.4s 4.7s linear forwards, v1Fill 0.4s 5.1s linear forwards;
+
+}
+
+@keyframes n2Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/// g
+
+#g{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 301.6268005371094;
+  stroke-dashoffset: 301.6268005371094;
+
+  animation: gAnimate 0.4s 5.1s linear forwards, e2Fill 0.4s 5.5s linear forwards;
+
+}
+
+@keyframes gAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// i2
+
+#i2{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+
+  animation: i2Animate 0.4s 5.5s linear forwards, r1Fill 0.4s 5.9s linear forwards;
+
+}
+
+@keyframes i2Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// s
+
+#s{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 289.3076477050781;
+  stroke-dashoffset: 289.3076477050781;
+
+  animation: sAnimate 0.4s 5.9s linear forwards, n1Fill 0.4s 6.3s linear forwards;
+
+}
+
+@keyframes sAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// b
+
+#b{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 360.051513671875;
+  stroke-dashoffset: 360.051513671875;
+
+  animation: bAnimate 0.4s 6.3s linear forwards, o1Fill 0.4s 6.7s linear forwards;
+
+}
+
+@keyframes bAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// l
+
+#l{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+
+  animation: lAnimate 0.4s 6.7s linear forwards, t1Fill 0.4s 7.1s linear forwards;
+
+}
+
+@keyframes lAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// a
+
+#a{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray:257.3144836425781;
+  stroke-dashoffset: 257.3144836425781;
+
+  animation: aAnimate 0.4s 7.1s linear forwards, e1Fill 0.4s 7.5s linear forwards;
+
+}
+
+@keyframes aAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// c
+
+#c{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 237.99777221679688;
+  stroke-dashoffset: 237.99777221679688;
+
+  animation: cAnimate 0.4s 7.5s linear forwards, v1Fill 0.4s 7.9s linear forwards;
+
+}
+
+@keyframes cAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// k
+
+#k{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 280.99725341796875;
+  stroke-dashoffset: 280.99725341796875;
+
+  animation: kAnimate 0.4s 7.9s linear forwards, e2Fill 0.4s 8.3s linear forwards;
+
+}
+
+@keyframes kAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// o2
+
+#o2{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 277.8965759277344;
+  stroke-dashoffset:277.8965759277344;
+
+  animation: o2Animate 0.4s 8.3s linear forwards, r1Fill 0.4s 8.7s linear forwards;
+
+}
+
+@keyframes o2Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/// r2
+
+#r2{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 319.9508361816406;
+  stroke-dashoffset: 319.9508361816406;
+
+  animation: r2Animate 0.4s 8.7s linear forwards, n1Fill 0.4s 9.1s linear forwards;
+
+}
+
+@keyframes r2Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/// w
+
+#w{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 389.9555358886719;
+  stroke-dashoffset: 389.9555358886719;
+
+  animation: wAnimate 0.4s 9.1s linear forwards, o1Fill 0.4s 9.5s linear forwards;
+
+}
+
+@keyframes wAnimate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+//h2
+
+#h2{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 288.6000061035156;
+  stroke-dashoffset: 288.6000061035156;
+
+  animation: h2Animate 0.4s 9.5s linear forwards, t1Fill 0.4s 9.9s linear forwards;
+
+}
+
+@keyframes h2Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/// i3
+
+#i3{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+
+  animation: i3Animate 0.4s 9.9s linear forwards, e1Fill 0.4s 10.3s linear forwards;
+
+}
+
+@keyframes i3Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+//t3
+
+#t3{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+
+  animation: t3Animate 0.4s 10.3s linear forwards, v1Fill 0.4s 10.7s linear forwards;
+
+}
+
+@keyframes t3Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+//e3
+
+#e3{
+  stroke: black;
+  fill:none;
+  stroke-width: 1;
+  stroke-dasharray: 310.61529541015625;
+  stroke-dashoffset: 310.61529541015625;
+
+  animation: e3Animate 0.4s 10.7s linear forwards, e2Fill 0.4s 11.1s linear forwards;
+
+}
+
+@keyframes e3Animate{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
