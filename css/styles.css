@@ -399,6 +399,10 @@ h4 {
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
+body {
+  background-color: whitesmoke;
+}
+
 .mainGrid {
   display: grid;
   grid-template-columns: repeat(8, minMax(10px, 1fr));
@@ -448,10 +452,10 @@ h4 {
 /* ============================================= */
 #n1 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 325.4366455078;
-  stroke-dashoffset: 325.4366455078;
+  stroke-dasharray: 319.8162841797;
+  stroke-dashoffset: 319.8162841797;
   animation: n1Animate 0.4s 0.2s linear forwards, n1Fill 0.4s 0.6s linear forwards;
 }
 
@@ -479,10 +483,10 @@ h4 {
 }
 #o1 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 277.8965759277;
-  stroke-dashoffset: 277.8965759277;
+  stroke-dasharray: 274.7245178223;
+  stroke-dashoffset: 274.7245178223;
   animation: o1Animate 0.4s 0.6s linear forwards, o1Fill 0.4s 1s linear forwards;
 }
 
@@ -510,10 +514,10 @@ h4 {
 }
 #t1 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
+  stroke-dasharray: 199.9999847412;
+  stroke-dashoffset: 199.9999847412;
   animation: t1Animate 0.4s 1s linear forwards, t1Fill 0.4s 1.4s linear forwards;
 }
 
@@ -541,10 +545,10 @@ h4 {
 }
 #e1 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 310.6152954102;
-  stroke-dashoffset: 310.6152954102;
+  stroke-dasharray: 338.9191589355;
+  stroke-dashoffset: 338.9191589355;
   animation: e1Animate 0.4s 1.4s linear forwards, e1Fill 0.4s 1.8s linear forwards;
 }
 
@@ -572,10 +576,10 @@ h4 {
 }
 #v1 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 226.5550689697;
-  stroke-dashoffset: 226.5550689697;
+  stroke-dasharray: 224.6798553467;
+  stroke-dashoffset: 224.6798553467;
   animation: v1Animate 0.4s 1.8s linear forwards, v1Fill 0.4s 2.2s linear forwards;
 }
 
@@ -603,10 +607,10 @@ h4 {
 }
 #e2 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 310.6152954102;
-  stroke-dashoffset: 310.6152954102;
+  stroke-dasharray: 338.9191589355;
+  stroke-dashoffset: 338.9191589355;
   animation: e2Animate 0.4s 2.2s linear forwards, e2Fill 0.4s 2.6s linear forwards;
 }
 
@@ -634,10 +638,10 @@ h4 {
 }
 #r1 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 319.9508361816;
-  stroke-dashoffset: 319.9508361816;
+  stroke-dasharray: 191.1565093994;
+  stroke-dashoffset: 191.1565093994;
   animation: r1Animate 0.4s 2.6s linear forwards, r1Fill 0.4s 3s linear forwards;
 }
 
@@ -665,10 +669,10 @@ h4 {
 }
 #y {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 198.1955566406;
-  stroke-dashoffset: 198.1955566406;
+  stroke-dasharray: 195.1281738281;
+  stroke-dashoffset: 195.1281738281;
   animation: vAnimate 0.4s 3s linear forwards, n1Fill 0.4s 3.4s linear forwards;
 }
 
@@ -679,10 +683,10 @@ h4 {
 }
 #t2 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
+  stroke-dasharray: 199.9999847412;
+  stroke-dashoffset: 199.9999847412;
   animation: t2Animate 0.5s 3.4s linear forwards, o1Fill 0.4s 3.9s linear forwards;
 }
 
@@ -698,10 +702,10 @@ h4 {
 }
 #h1 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 288.6000061035;
-  stroke-dashoffset: 288.6000061035;
+  stroke-dasharray: 244.9195861816;
+  stroke-dashoffset: 244.9195861816;
   animation: h1Animate 0.4s 3.9s linear forwards, t1Fill 0.4s 4.3s linear forwards;
 }
 
@@ -712,10 +716,10 @@ h4 {
 }
 #i1 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 130;
-  stroke-dashoffset: 130;
+  stroke-dasharray: 117.3999938965;
+  stroke-dashoffset: 117.3999938965;
   animation: i1Animate 0.4s 4.3s linear forwards, e1Fill 0.4s 4.7s linear forwards;
 }
 
@@ -726,10 +730,10 @@ h4 {
 }
 #n2 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 325.4366455078;
-  stroke-dashoffset: 325.4366455078;
+  stroke-dasharray: 319.8162841797;
+  stroke-dashoffset: 319.8162841797;
   animation: n2Animate 0.4s 4.7s linear forwards, v1Fill 0.4s 5.1s linear forwards;
 }
 
@@ -740,10 +744,10 @@ h4 {
 }
 #g {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 301.6268005371;
-  stroke-dashoffset: 301.6268005371;
+  stroke-dasharray: 307.2387390137;
+  stroke-dashoffset: 307.2387390137;
   animation: gAnimate 0.4s 5.1s linear forwards, e2Fill 0.4s 5.5s linear forwards;
 }
 
@@ -754,10 +758,10 @@ h4 {
 }
 #i2 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 130;
-  stroke-dashoffset: 130;
+  stroke-dasharray: 117.3999938965;
+  stroke-dashoffset: 117.3999938965;
   animation: i2Animate 0.4s 5.5s linear forwards, r1Fill 0.4s 5.9s linear forwards;
 }
 
@@ -768,10 +772,10 @@ h4 {
 }
 #s {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 289.3076477051;
-  stroke-dashoffset: 289.3076477051;
+  stroke-dasharray: 289.7479858398;
+  stroke-dashoffset: 289.7479858398;
   animation: sAnimate 0.4s 5.9s linear forwards, n1Fill 0.4s 6.3s linear forwards;
 }
 
@@ -782,10 +786,10 @@ h4 {
 }
 #b {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 360.0515136719;
-  stroke-dashoffset: 360.0515136719;
+  stroke-dasharray: 273.5335998535;
+  stroke-dashoffset: 273.5335998535;
   animation: bAnimate 0.4s 6.3s linear forwards, o1Fill 0.4s 6.7s linear forwards;
 }
 
@@ -796,7 +800,7 @@ h4 {
 }
 #l {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
@@ -810,7 +814,7 @@ h4 {
 }
 #a {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
   stroke-dasharray: 257.3144836426;
   stroke-dashoffset: 257.3144836426;
@@ -824,7 +828,7 @@ h4 {
 }
 #c {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
   stroke-dasharray: 237.9977722168;
   stroke-dashoffset: 237.9977722168;
@@ -838,7 +842,7 @@ h4 {
 }
 #k {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
   stroke-dasharray: 280.997253418;
   stroke-dashoffset: 280.997253418;
@@ -852,10 +856,10 @@ h4 {
 }
 #o2 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 277.8965759277;
-  stroke-dashoffset: 277.8965759277;
+  stroke-dasharray: 274.7245178223;
+  stroke-dashoffset: 274.7245178223;
   animation: o2Animate 0.4s 8.3s linear forwards, r1Fill 0.4s 8.7s linear forwards;
 }
 
@@ -866,10 +870,10 @@ h4 {
 }
 #r2 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 319.9508361816;
-  stroke-dashoffset: 319.9508361816;
+  stroke-dasharray: 191.1565093994;
+  stroke-dashoffset: 191.1565093994;
   animation: r2Animate 0.4s 8.7s linear forwards, n1Fill 0.4s 9.1s linear forwards;
 }
 
@@ -880,7 +884,7 @@ h4 {
 }
 #w {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
   stroke-dasharray: 389.9555358887;
   stroke-dashoffset: 389.9555358887;
@@ -894,10 +898,10 @@ h4 {
 }
 #h2 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 288.6000061035;
-  stroke-dashoffset: 288.6000061035;
+  stroke-dasharray: 244.9195861816;
+  stroke-dashoffset: 244.9195861816;
   animation: h2Animate 0.4s 9.5s linear forwards, t1Fill 0.4s 9.9s linear forwards;
 }
 
@@ -908,7 +912,7 @@ h4 {
 }
 #i3 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
   stroke-dasharray: 130;
   stroke-dashoffset: 130;
@@ -922,7 +926,7 @@ h4 {
 }
 #t3 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
@@ -936,10 +940,10 @@ h4 {
 }
 #e3 {
   stroke: black;
-  fill: none;
+  fill: whitesmoke;
   stroke-width: 1;
-  stroke-dasharray: 310.6152954102;
-  stroke-dashoffset: 310.6152954102;
+  stroke-dasharray: 338.9191589355;
+  stroke-dashoffset: 338.9191589355;
   animation: e3Animate 0.4s 10.7s linear forwards, e2Fill 0.4s 11.1s linear forwards;
 }
 
