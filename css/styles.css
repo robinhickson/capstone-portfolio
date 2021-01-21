@@ -351,7 +351,7 @@ template {
 /*              Base styles                      */
 /* ============================================= */
 * {
-  font-family: "Lato", sans-serif;
+  font-family: "Nasalization", sans-serif;
   color: rgba(119, 119, 119, 0.6);
   box-sizing: border-box;
 }
@@ -400,17 +400,14 @@ h4 {
 /*              Grid System                      */
 /* ============================================= */
 body {
-  background-color: whitesmoke;
+  background-color: #f2f2f2;
 }
 
 .mainGrid {
   display: grid;
   grid-template-columns: repeat(8, minMax(10px, 1fr));
   grid-template-rows: repeat(8, minMax(10px, 1fr));
-  margin: 0 auto;
-  border: solid 1px black;
-  height: 100vh;
-  width: 100vh;
+  border: solid 5px black;
 }
 
 .mainGrid > div::before {
@@ -423,11 +420,55 @@ body {
   display: grid;
 }
 
-.mainGrid > div::before, .mainGrid > div > #n1, .mainGrid > div > #o1, .mainGrid > div > #t1, .mainGrid > div > #e1, .mainGrid > div > #v1, .mainGrid > div > #e2,
-.mainGrid > div > #r1, .mainGrid > div > #y, .mainGrid > div > #t2, .mainGrid > div > #h1, .mainGrid > div > #i1, .mainGrid > div > #n2, .mainGrid > div > #g,
-.mainGrid > div > #i2, .mainGrid > div > #s, .mainGrid > div > #b, .mainGrid > div > #l, .mainGrid > div > #a, .mainGrid > div > #c, .mainGrid > div > #k,
-.mainGrid > div > #o2, .mainGrid > div > #r2, .mainGrid > div > #w, .mainGrid > div > #h2, .mainGrid > div > #i3, .mainGrid > div > #t3, .mainGrid > div > #e3 {
+.mainGrid > div > * {
   grid-area: 1/1/2/2;
+}
+
+.white-square::before {
+  background-color: #f2f2f2;
+}
+
+.cube {
+  width: 1000px;
+  height: 1000px;
+  position: relative;
+  margin: auto auto;
+  margin-top: 40vh;
+  margin-bottom: 40vh;
+  perspective: 700px;
+  transform-style: preserve-3d;
+}
+
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+.face-front {
+  transform: translate3d(0, 0, 500px);
+  opacity: 0.9;
+}
+
+.face-back {
+  transform: rotateY(180deg) translate3d(0, 0, 500px);
+ 
+}
+
+.face-left {
+  transform: rotateY(-90deg) translate3d(0, 0, 500px);
+}
+
+.face-right {
+  transform: rotateY(90deg) translate3d(0, 0, 500px);
+}
+
+.face-top {
+  transform: rotateX(90deg) translate3d(0, 0, 500px);
+}
+
+.face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 500px);
 }
 
 /* ============================================= */
@@ -451,12 +492,12 @@ body {
 /*              Images                           */
 /* ============================================= */
 #n1 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 319.8162841797;
   stroke-dashoffset: 319.8162841797;
-  animation: n1Animate 0.4s 0.2s linear forwards, n1Fill 0.4s 0.6s linear forwards;
+  animation: n1Animate 0.4s 0.2s linear forwards, n1Fill 5s 0.6s linear forwards;
 }
 
 @keyframes n1Animate {
@@ -466,28 +507,28 @@ body {
 }
 @keyframes n1Fill {
   0% {
-    fill: #e9e9e9;
+    fill: silver;
   }
   25% {
-    fill: #f0afaf;
+    fill: #8d8d8d;
   }
   50% {
-    fill: #ee5353;
+    fill: #ca8e8e;
   }
   75% {
-    fill: #f32424;
+    fill: #412d2d;
   }
   100% {
-    fill: red;
+    fill: #f2f2f2;
   }
 }
 #o1 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 274.7245178223;
   stroke-dashoffset: 274.7245178223;
-  animation: o1Animate 0.4s 0.6s linear forwards, o1Fill 0.4s 1s linear forwards;
+  animation: o1Animate 0.4s 0.6s linear forwards, o1Fill 5s 1s linear forwards;
 }
 
 @keyframes o1Animate {
@@ -497,28 +538,28 @@ body {
 }
 @keyframes o1Fill {
   0% {
-    fill: #fafaf9;
+    fill: silver;
   }
   25% {
-    fill: #f7e8cd;
+    fill: #8d8d8d;
   }
   50% {
-    fill: #f5c773;
+    fill: #ca8e8e;
   }
   75% {
-    fill: #fab027;
+    fill: #412d2d;
   }
   100% {
-    fill: orange;
+    fill: #f2f2f2;
   }
 }
 #t1 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 199.9999847412;
   stroke-dashoffset: 199.9999847412;
-  animation: t1Animate 0.4s 1s linear forwards, t1Fill 0.4s 1.4s linear forwards;
+  animation: t1Animate 0.4s 1s linear forwards, t1Fill 5s 1.4s linear forwards;
 }
 
 @keyframes t1Animate {
@@ -528,28 +569,28 @@ body {
 }
 @keyframes t1Fill {
   0% {
-    fill: #fafaf7;
+    fill: silver;
   }
   25% {
-    fill: #f7f7c4;
+    fill: #8d8d8d;
   }
   50% {
-    fill: #fafa76;
+    fill: #ca8e8e;
   }
   75% {
-    fill: #fafa2e;
+    fill: #412d2d;
   }
   100% {
-    fill: yellow;
+    fill: #f2f2f2;
   }
 }
 #e1 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 338.9191589355;
   stroke-dashoffset: 338.9191589355;
-  animation: e1Animate 0.4s 1.4s linear forwards, e1Fill 0.4s 1.8s linear forwards;
+  animation: e1Animate 0.4s 1.4s linear forwards, n1Fill 5s 1.8s linear forwards;
 }
 
 @keyframes e1Animate {
@@ -559,28 +600,28 @@ body {
 }
 @keyframes e1Fill {
   0% {
-    fill: #858585;
+    fill: silver;
   }
   25% {
-    fill: #738f73;
+    fill: #8d8d8d;
   }
   50% {
-    fill: #428842;
+    fill: #ca8e8e;
   }
   75% {
-    fill: #168516;
+    fill: #412d2d;
   }
   100% {
-    fill: green;
+    fill: #f2f2f2;
   }
 }
 #v1 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 224.6798553467;
   stroke-dashoffset: 224.6798553467;
-  animation: v1Animate 0.4s 1.8s linear forwards, v1Fill 0.4s 2.2s linear forwards;
+  animation: v1Animate 0.4s 1.8s linear forwards, v1Fill 5s 2.2s linear forwards;
 }
 
 @keyframes v1Animate {
@@ -590,28 +631,28 @@ body {
 }
 @keyframes v1Fill {
   0% {
-    fill: #f3f3f7;
+    fill: silver;
   }
   25% {
-    fill: #c2c2f5;
+    fill: #8d8d8d;
   }
   50% {
-    fill: #7676f8;
+    fill: #ca8e8e;
   }
   75% {
-    fill: #3d3dfa;
+    fill: #412d2d;
   }
   100% {
-    fill: blue;
+    fill: #f2f2f2;
   }
 }
 #e2 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 338.9191589355;
   stroke-dashoffset: 338.9191589355;
-  animation: e2Animate 0.4s 2.2s linear forwards, e2Fill 0.4s 2.6s linear forwards;
+  animation: e2Animate 0.4s 2.2s linear forwards, e2Fill 5s 2.6s linear forwards;
 }
 
 @keyframes e2Animate {
@@ -621,28 +662,28 @@ body {
 }
 @keyframes e2Fill {
   0% {
-    fill: #89898a;
+    fill: silver;
   }
   25% {
-    fill: #82768b;
+    fill: #8d8d8d;
   }
   50% {
-    fill: #694385;
+    fill: #ca8e8e;
   }
   75% {
-    fill: #5b1c88;
+    fill: #412d2d;
   }
   100% {
-    fill: indigo;
+    fill: #f2f2f2;
   }
 }
 #r1 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 191.1565093994;
   stroke-dashoffset: 191.1565093994;
-  animation: r1Animate 0.4s 2.6s linear forwards, r1Fill 0.4s 3s linear forwards;
+  animation: r1Animate 0.4s 2.6s linear forwards, r1Fill 5s 3s linear forwards;
 }
 
 @keyframes r1Animate {
@@ -652,28 +693,28 @@ body {
 }
 @keyframes r1Fill {
   0% {
-    fill: #f7f4f7;
+    fill: silver;
   }
   25% {
-    fill: #f7c3f7;
+    fill: #8d8d8d;
   }
   50% {
-    fill: violet;
+    fill: #ca8e8e;
   }
   75% {
-    fill: #f141f1;
+    fill: #412d2d;
   }
   100% {
-    fill: #f50bf5;
+    fill: #f2f2f2;
   }
 }
 #y {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 195.1281738281;
   stroke-dashoffset: 195.1281738281;
-  animation: vAnimate 0.4s 3s linear forwards, n1Fill 0.4s 3.4s linear forwards;
+  animation: vAnimate 0.4s 3s linear forwards, o1Fill 5s 3.4s linear forwards;
 }
 
 @keyframes vAnimate {
@@ -682,8 +723,8 @@ body {
   }
 }
 #t2 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 199.9999847412;
   stroke-dashoffset: 199.9999847412;
@@ -695,18 +736,13 @@ body {
     stroke-dashoffset: 0;
   }
 }
-@keyframes t2Fill {
-  100% {
-    fill: orange;
-  }
-}
 #h1 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 244.9195861816;
   stroke-dashoffset: 244.9195861816;
-  animation: h1Animate 0.4s 3.9s linear forwards, t1Fill 0.4s 4.3s linear forwards;
+  animation: h1Animate 0.4s 3.9s linear forwards, t1Fill 5s 4.3s linear forwards;
 }
 
 @keyframes h1Animate {
@@ -715,12 +751,12 @@ body {
   }
 }
 #i1 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 117.3999938965;
   stroke-dashoffset: 117.3999938965;
-  animation: i1Animate 0.4s 4.3s linear forwards, e1Fill 0.4s 4.7s linear forwards;
+  animation: i1Animate 0.4s 4.3s linear forwards, e1Fill 5s 4.7s linear forwards;
 }
 
 @keyframes i1Animate {
@@ -729,12 +765,12 @@ body {
   }
 }
 #n2 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 319.8162841797;
   stroke-dashoffset: 319.8162841797;
-  animation: n2Animate 0.4s 4.7s linear forwards, v1Fill 0.4s 5.1s linear forwards;
+  animation: n2Animate 0.4s 4.7s linear forwards, v1Fill 5s 5.1s linear forwards;
 }
 
 @keyframes n2Animate {
@@ -743,12 +779,12 @@ body {
   }
 }
 #g {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 307.2387390137;
   stroke-dashoffset: 307.2387390137;
-  animation: gAnimate 0.4s 5.1s linear forwards, e2Fill 0.4s 5.5s linear forwards;
+  animation: gAnimate 0.4s 5.1s linear forwards, e2Fill 5s 5.5s linear forwards;
 }
 
 @keyframes gAnimate {
@@ -757,12 +793,12 @@ body {
   }
 }
 #i2 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 117.3999938965;
   stroke-dashoffset: 117.3999938965;
-  animation: i2Animate 0.4s 5.5s linear forwards, r1Fill 0.4s 5.9s linear forwards;
+  animation: i2Animate 0.4s 5.5s linear forwards, n1Fill 5s 5.9s linear forwards;
 }
 
 @keyframes i2Animate {
@@ -771,12 +807,12 @@ body {
   }
 }
 #s {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 289.7479858398;
   stroke-dashoffset: 289.7479858398;
-  animation: sAnimate 0.4s 5.9s linear forwards, n1Fill 0.4s 6.3s linear forwards;
+  animation: sAnimate 0.4s 5.9s linear forwards, o1Fill 5s 6.3s linear forwards;
 }
 
 @keyframes sAnimate {
@@ -785,12 +821,12 @@ body {
   }
 }
 #b {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 273.5335998535;
   stroke-dashoffset: 273.5335998535;
-  animation: bAnimate 0.4s 6.3s linear forwards, o1Fill 0.4s 6.7s linear forwards;
+  animation: bAnimate 0.4s 6.3s linear forwards, n1Fill 5s 6.7s linear forwards;
 }
 
 @keyframes bAnimate {
@@ -799,12 +835,12 @@ body {
   }
 }
 #l {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
-  animation: lAnimate 0.4s 6.7s linear forwards, t1Fill 0.4s 7.1s linear forwards;
+  animation: lAnimate 0.4s 6.7s linear forwards, t1Fill 5s 7.1s linear forwards;
 }
 
 @keyframes lAnimate {
@@ -813,12 +849,12 @@ body {
   }
 }
 #a {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 257.3144836426;
   stroke-dashoffset: 257.3144836426;
-  animation: aAnimate 0.4s 7.1s linear forwards, e1Fill 0.4s 7.5s linear forwards;
+  animation: aAnimate 0.4s 7.1s linear forwards, e1Fill 5s 7.5s linear forwards;
 }
 
 @keyframes aAnimate {
@@ -827,12 +863,12 @@ body {
   }
 }
 #c {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 237.9977722168;
   stroke-dashoffset: 237.9977722168;
-  animation: cAnimate 0.4s 7.5s linear forwards, v1Fill 0.4s 7.9s linear forwards;
+  animation: cAnimate 0.4s 7.5s linear forwards, v1Fill 5s 7.9s linear forwards;
 }
 
 @keyframes cAnimate {
@@ -841,12 +877,12 @@ body {
   }
 }
 #k {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 280.997253418;
   stroke-dashoffset: 280.997253418;
-  animation: kAnimate 0.4s 7.9s linear forwards, e2Fill 0.4s 8.3s linear forwards;
+  animation: kAnimate 0.4s 7.9s linear forwards, e2Fill 5s 8.3s linear forwards;
 }
 
 @keyframes kAnimate {
@@ -855,12 +891,12 @@ body {
   }
 }
 #o2 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 274.7245178223;
   stroke-dashoffset: 274.7245178223;
-  animation: o2Animate 0.4s 8.3s linear forwards, r1Fill 0.4s 8.7s linear forwards;
+  animation: o2Animate 0.4s 8.3s linear forwards, n1Fill 5s 8.7s linear forwards;
 }
 
 @keyframes o2Animate {
@@ -869,12 +905,12 @@ body {
   }
 }
 #r2 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 191.1565093994;
   stroke-dashoffset: 191.1565093994;
-  animation: r2Animate 0.4s 8.7s linear forwards, n1Fill 0.4s 9.1s linear forwards;
+  animation: r2Animate 0.4s 8.7s linear forwards, o1Fill 5s 9.1s linear forwards;
 }
 
 @keyframes r2Animate {
@@ -883,12 +919,12 @@ body {
   }
 }
 #w {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 389.9555358887;
   stroke-dashoffset: 389.9555358887;
-  animation: wAnimate 0.4s 9.1s linear forwards, o1Fill 0.4s 9.5s linear forwards;
+  animation: wAnimate 0.4s 9.1s linear forwards, n1Fill 5s 9.5s linear forwards;
 }
 
 @keyframes wAnimate {
@@ -897,12 +933,12 @@ body {
   }
 }
 #h2 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 244.9195861816;
   stroke-dashoffset: 244.9195861816;
-  animation: h2Animate 0.4s 9.5s linear forwards, t1Fill 0.4s 9.9s linear forwards;
+  animation: h2Animate 0.4s 9.5s linear forwards, t1Fill 5s 9.9s linear forwards;
 }
 
 @keyframes h2Animate {
@@ -911,12 +947,12 @@ body {
   }
 }
 #i3 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 130;
   stroke-dashoffset: 130;
-  animation: i3Animate 0.4s 9.9s linear forwards, e1Fill 0.4s 10.3s linear forwards;
+  animation: i3Animate 0.4s 9.9s linear forwards, e1Fill 5s 10.3s linear forwards;
 }
 
 @keyframes i3Animate {
@@ -925,12 +961,12 @@ body {
   }
 }
 #t3 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
-  animation: t3Animate 0.4s 10.3s linear forwards, v1Fill 0.4s 10.7s linear forwards;
+  animation: t3Animate 0.4s 10.3s linear forwards, v1Fill 5s 10.7s linear forwards;
 }
 
 @keyframes t3Animate {
@@ -939,12 +975,12 @@ body {
   }
 }
 #e3 {
-  stroke: black;
-  fill: whitesmoke;
+  stroke: whitesmoke;
+  fill: rgba(0, 0, 10, 0.8);
   stroke-width: 1;
   stroke-dasharray: 338.9191589355;
   stroke-dashoffset: 338.9191589355;
-  animation: e3Animate 0.4s 10.7s linear forwards, e2Fill 0.4s 11.1s linear forwards;
+  animation: e3Animate 0.4s 10.7s linear forwards, e2Fill 5s 11.1s linear forwards;
 }
 
 @keyframes e3Animate {

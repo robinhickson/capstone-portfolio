@@ -4,17 +4,16 @@
 /* ============================================= */
 
 body{
-  background-color: whitesmoke;
+  background-color: rgb(242,242,242);
+
+  
 }
 
 .mainGrid{
   display: grid;
   grid-template-columns: repeat(8, minMax(10px, 1fr));
   grid-template-rows: repeat(8, minMax(10px, 1fr));
-  margin: 0 auto;
-  border: solid 1px black;
-  height: 100vh;
-  width: 100vh;
+  border: solid 5px black;
 }
 
 .mainGrid >div::before {
@@ -29,17 +28,60 @@ body{
 
 .mainGrid > div{
   display: grid;
-}
-
-
-.mainGrid >div::before, .mainGrid > div > #n1, .mainGrid > div > #o1, .mainGrid > div > #t1, .mainGrid > div > #e1, .mainGrid > div > #v1, .mainGrid > div > #e2,
-.mainGrid > div > #r1, .mainGrid > div > #y,.mainGrid > div > #t2, .mainGrid > div > #h1, .mainGrid > div > #i1, .mainGrid > div > #n2, .mainGrid > div > #g,
-.mainGrid > div > #i2,.mainGrid > div > #s, .mainGrid > div > #b, .mainGrid > div > #l, .mainGrid > div > #a, .mainGrid > div > #c, .mainGrid > div > #k,
-.mainGrid > div > #o2, .mainGrid > div > #r2, .mainGrid > div > #w, .mainGrid > div > #h2, .mainGrid > div > #i3, .mainGrid > div > #t3, .mainGrid > div > #e3{
-  grid-area: 1/1/2/2;
  
-
 }
 
 
+ .mainGrid > div > *{
+  grid-area: 1/1/2/2;
 
+
+}
+
+.white-square::before{
+  background-color: rgb(242,242,242);
+}
+
+//Cube structure
+
+
+.cube {
+  width: $size;
+  height: $size;
+  position: relative;
+  margin: 20vh auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+ 
+}
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  
+}
+
+
+.face-front {
+  transform: translate3d(0, 0, $size/2);
+}
+
+.face-back {
+  transform: rotateY(180deg) translate3d(0, 0, $size/2);
+}
+
+.face-left {
+  transform: rotateY(-90deg) translate3d(0, 0, $size/2);
+}
+
+.face-right {
+  transform: rotateY(90deg) translate3d(0, 0, $size/2);
+}
+
+.face-top {
+  transform: rotateX(90deg) translate3d(0, 0, $size/2);
+}
+
+.face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, $size/2);
+}
