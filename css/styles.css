@@ -389,13 +389,14 @@ body {
   grid-template-columns: minMax(100px, 1fr);
   grid-template-areas: "handwriting" "animation" "menu" "footer";
   place-items: center;
+  margin: 0 auto;
 }
 
 .textGrid {
   grid-area: handwriting;
   transform: translate(-33%, 0);
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 50%;
   width: 100%;
 }
@@ -412,8 +413,24 @@ body {
 
 .foot {
   grid-area: footer;
-  color: whitesmoke;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   padding: 1em;
+}
+
+.signature a {
+  font-family: "Liana";
+  font-size: 3vh;
+  color: #ca8d8d;
+  margin-bottom: 0.2em;
+}
+
+.copyright {
+  font-family: "Reross Square", "Jakob";
+  font-size: 1.5vh;
+  color: #3f3f3f;
+  opacity: 0.5;
 }
 
 /* ============================================= */
@@ -440,6 +457,24 @@ body {
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
+#button_toggle {
+  border: 1px solid #c0c0c0;
+  height: 25px;
+  width: 25px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#button_toggle:focus {
+  outline-style: none;
+}
+
+#toggle_mute {
+  width: 100%;
+  background-color: black;
+}
+
 #t1 {
   stroke: whitesmoke;
   fill: none;

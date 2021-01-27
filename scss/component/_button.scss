@@ -1,3 +1,24 @@
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
+
+
+#button_toggle{
+    border: 1px solid #c0c0c0;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+ 
+}
+
+#button_toggle:focus{
+   outline-style: none;
+}
+
+
+#toggle_mute{
+    width: 100%;
+    background-color: black;
+}

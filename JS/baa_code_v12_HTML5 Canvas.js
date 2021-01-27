@@ -1036,8 +1036,8 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_12.png", id:"CachedBmp_12"},
-		{src:"images/baa_code_v12_HTML5 Canvas_atlas_1.png", id:"baa_code_v12_HTML5 Canvas_atlas_1"}
+		{src:"media/CachedBmp_12.png", id:"CachedBmp_12"},
+		{src:"media/baa_code_v12_HTML5 Canvas_atlas_1.png", id:"baa_code_v12_HTML5 Canvas_atlas_1"}
 	],
 	preloads: []
 };

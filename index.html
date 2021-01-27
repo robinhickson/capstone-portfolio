@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/qrn6vpk.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gmz4zqm.css">
     
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="JS/baa_code_v12_HTML5 Canvas.js"></script>
@@ -77,11 +78,11 @@
 
 <body onload="init();">
     <div id='_preload_div_'> <span style='display: inline-block; height: 100%; vertical-align: middle;'></span> <img
-            src=images/_preloader.gif style='vertical-align: middle; max-height: 100%' /></div>
+            src=media/_preloader.gif style='vertical-align: middle; max-height: 100%' /></div>
 
-    <div class="grid">
+    <div class="grid" >
 
-        <div id="animation_container" style="width:1347px; height:807px">
+        <div id="animation_container" style="width:1347px; height:807px" onmouseenter="PlaySound('player')" onmouseleave="PlaySound('player')">
             <canvas id="canvas" width="1347" height="807"></canvas>
             <div id="dom_overlay_container"
                 style="pointer-events:none; overflow:hidden; width:1347px; height:807px; display: none;">
@@ -96,8 +97,16 @@
       
         </div>
         <footer class="foot">
-            <p>by writecodesign</p>
+            <button type="button" id="button_toggle" onclick="muteUnmute('player'), chngImg()">
+                <img src="media/Mute_ON.png" id="toggle_mute" alt="button mute on">
+            </button>
+            <div class="signature"><span class="copyright">Web Design by © &nbsp;</span><a href="www.writecodesign.com" target="_blank">writecodesign</a></div>
         </footer>
+    </div>
+    <div id="overlay">
+        
+        <audio id="player" src="media\Sheep-Lamp-Bah-Multiple-www.fesliyanstudios.com.mp3" muted></audio>
+       
     </div>
     <script src="JS/app.js"></script>
 </body>
