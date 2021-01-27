@@ -381,6 +381,42 @@ body {
   padding-top: 1rem;
 }
 
+.signature {
+  height: 2em;
+}
+
+.signature a {
+  font-family: "Liana";
+  font-size: 5vh;
+  color: #ca8d8d;
+  margin-bottom: 0.2em;
+}
+
+.copyright {
+  font-family: "Reross Square", "Jakob";
+  font-size: 2vh;
+  color: #3f3f3f;
+  opacity: 0.5;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+.modal-previous {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+}
+
+.modal-next {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
@@ -421,20 +457,6 @@ body {
   padding: 1em;
 }
 
-.signature a {
-  font-family: "Liana";
-  font-size: 3vh;
-  color: #ca8d8d;
-  margin-bottom: 0.2em;
-}
-
-.copyright {
-  font-family: "Reross Square", "Jakob";
-  font-size: 1.5vh;
-  color: #3f3f3f;
-  opacity: 0.5;
-}
-
 /* ============================================= */
 /*              Canvas                            */
 /* ============================================= */
@@ -453,28 +475,73 @@ body {
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: whitesmoke;
+  border: 2px solid rgba(20, 1, 1, 0.6);
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.hidden {
+  display: none;
+}
+
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
+.searchBox {
+  height: 2em;
+  margin: 2rem;
+  background-color: rgba(119, 119, 119, 0.6);
+  color: black;
+  border-radius: 5px;
+}
+.searchBox:hover, .searchBox:focus {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  outline: none;
+  cursor: inherit;
+}
+
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
 #button_toggle {
-  border: 1px solid #c0c0c0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   padding: 0;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  position: absolute;
+  right: 50%;
+  top: 1%;
 }
 
-#button_toggle:focus {
+#toggle_mute:hover {
+  border: rgba(233, 85, 233, 0.8) 1px solid;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgba(221, 221, 221, 0.6);
   outline-style: none;
 }
 
-#toggle_mute {
-  width: 100%;
-  background-color: black;
+button:hover {
+  background-color: rgba(233, 85, 233, 0.8);
+  color: whitesmoke;
 }
 
 #t1 {

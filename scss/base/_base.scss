@@ -11,3 +11,40 @@ body{
     font-weight: $font-light;    
     padding-top: 1rem;
   }
+
+  .signature{
+    height: 2em;  
+  }
+  
+  .signature a{
+    font-family: 'Liana';
+    font-size: 5vh;
+    color: #ca8d8d;
+    
+    margin-bottom: 0.2em;
+  }
+  .copyright{
+    font-family: 'Reross Square', 'Jakob';
+    font-size: 2vh;
+    color: #3f3f3f; 
+    opacity: 0.5;
+    
+    }
+
+  .modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+.modal-previous {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+}
+
+.modal-next {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+}

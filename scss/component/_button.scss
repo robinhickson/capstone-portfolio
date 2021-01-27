@@ -4,21 +4,28 @@
 
 
 #button_toggle{
-    border: 1px solid #c0c0c0;
-    height: 25px;
-    width: 25px;
-    padding: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
- 
-}
-
-#button_toggle:focus{
-   outline-style: none;
+    // border: 1px solid #c0c0c0;
+    height: 20px;
+    width: 20px;
+    padding: 0;   
+    position: absolute;
+    right: 50%;
+    top: 1%;
 }
 
 
-#toggle_mute{
-    width: 100%;
-    background-color: black;
+#toggle_mute:hover{
+   border: $primary-color 1px solid;
 }
+
+button {
+    cursor: pointer;
+    background-color: $secondary-color-light;
+    outline-style: none;
+}
+
+button:hover {
+    background-color: $primary-color;
+    color: $white;
+}
+

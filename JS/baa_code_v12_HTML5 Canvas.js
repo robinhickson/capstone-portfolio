@@ -581,7 +581,11 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	this.actionFrames = [278];
+	//--------------------------------------------//
+	//--------------------------------------------//
 	// // Sheep Button Hotspot and 'indicator':
+	//--------------------------------------------//
+	//--------------------------------------------//
 	this.frame_278 = function() {
 		
 		var frequency = 1;
@@ -597,7 +601,7 @@ if (reversed == null) { reversed = false; }
 		
 		function fl_MouseClickHandler()
 		{
-			window.location.href = "portfolio.html";	
+			displayModal();	
 		}
 		
 	
