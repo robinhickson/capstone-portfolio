@@ -29,7 +29,7 @@
 
 #animation_container {
   grid-area: animation;
-  max-height: 66vh;
+  max-height: 80vh;
   margin: 0 auto;
 }
 
@@ -40,6 +40,7 @@
 }
 
 .foot {
-  height: 4rem;
-  color: $primary-color;
+  grid-area: footer;
+  color: $white;
+  padding: 1em;
 }
