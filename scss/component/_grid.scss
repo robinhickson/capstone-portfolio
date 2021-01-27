@@ -13,8 +13,8 @@
     "menu"
     "footer"
   ;
+place-items: center;
 
-  justify-items: center;
 }
 
 .textGrid {
@@ -29,13 +29,13 @@
 
 #animation_container {
   grid-area: animation;
-  max-height: 80vh;
-  margin: 0 auto;
+max-height: 90vh;
+
 }
 
 .menu {
   grid-area: menu;
-  justify-self: center;
+ 
   z-index: 2;
 }
 

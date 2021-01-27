@@ -388,7 +388,7 @@ body {
   display: grid;
   grid-template-columns: minMax(100px, 1fr);
   grid-template-areas: "handwriting" "animation" "menu" "footer";
-  justify-items: center;
+  place-items: center;
 }
 
 .textGrid {
@@ -402,13 +402,11 @@ body {
 
 #animation_container {
   grid-area: animation;
-  max-height: 80vh;
-  margin: 0 auto;
+  max-height: 90vh;
 }
 
 .menu {
   grid-area: menu;
-  justify-self: center;
   z-index: 2;
 }
 
@@ -427,15 +425,10 @@ body {
   top: 50%;
 }
 
-#dom_overlay_container {
-  border-radius: 15% 15% 1% 1%;
-  box-shadow: #010003 0 -5em 15em 10em, #050050 8em 2em 8em 8em;
-}
-
 #canvas {
   border-radius: 15% 15% 1% 1%;
   box-shadow: #010003 0 -5em 15em 10em, #050050 8em 2em 8em 8em;
-  max-height: 80vh;
+  max-height: 90vh;
 }
 
 /* ============================================= */
