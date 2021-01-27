@@ -19,19 +19,18 @@
 
 .textGrid {
   grid-area: handwriting;
- transform: translate(-33%,0);
+  transform: translate(-33%, 0);
   position: absolute;
   top: 25%;
-  left:50%;
+  left: 50%;
   width: 100%;
- 
+
 }
 
 #animation_container {
   grid-area: animation;
-  // max-width: 500px;
-  // max-height: 300px;
-
+  max-height: 66vh;
+  margin: 0 auto;
 }
 
 .menu {
@@ -41,5 +40,6 @@
 }
 
 .foot {
-  
+  height: 4rem;
+  color: $primary-color;
 }

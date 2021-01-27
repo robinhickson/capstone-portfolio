@@ -370,8 +370,6 @@ h1, h2, h3, h4 {
 
 body {
   background-image: radial-gradient(closest-corner at 10%, #010003, #0d0531 1px);
-  width: 100vw;
-  height: 100vh;
 }
 
 .title {
@@ -404,12 +402,19 @@ body {
 
 #animation_container {
   grid-area: animation;
+  max-height: 66vh;
+  margin: 0 auto;
 }
 
 .menu {
   grid-area: menu;
   justify-self: center;
   z-index: 2;
+}
+
+.foot {
+  height: 4rem;
+  color: rgba(233, 85, 233, 0.8);
 }
 
 /* ============================================= */
@@ -421,9 +426,15 @@ body {
   top: 50%;
 }
 
-#dom_overlay_container, #canvas {
+#dom_overlay_container {
   border-radius: 15% 15% 1% 1%;
-  box-shadow: #010003 0 -1em 15em 10em, #050050 8em 2em 8em 8em;
+  box-shadow: #010003 0 -5em 15em 10em, #050050 8em 2em 8em 8em;
+}
+
+#canvas {
+  border-radius: 15% 15% 1% 1%;
+  box-shadow: #010003 0 -5em 15em 10em, #050050 8em 2em 8em 8em;
+  max-height: 66vh;
 }
 
 /* ============================================= */
@@ -1067,8 +1078,13 @@ body {
     justify-items: center;
   }
 
-  #animation_container {
-    grid-area: animation;
+  .textGrid {
+    grid-area: handwriting;
+    transform: translate(-33%, 0);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 100%;
   }
 
   .menu {
@@ -1077,23 +1093,32 @@ body {
     z-index: 2;
   }
 }
-@media (min-width: 1075px) {
+@media (min-width: 1289px) {
   .grid {
     display: grid;
-    grid-template-columns: minMax(100px, 1fr);
-    grid-template-areas: "handwriting" "animation" "menu" "footer";
+    grid-template-columns: minMax(300px, 1fr);
+    grid-template-areas: "menu animation animation" "footer animation animation" "handwriting handwriting handwriting";
     justify-items: center;
   }
 
-  #animation_container {
-    grid-area: animation;
+  .textGrid {
+    grid-area: handwriting;
+    transform: translate(-33%, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
   }
 
   .menu {
     grid-area: menu;
     justify-self: center;
     z-index: 2;
+    padding-top: 4rem;
   }
+}
+.foot {
+  align-self: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

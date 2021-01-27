@@ -581,28 +581,18 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	this.actionFrames = [278];
-	// timeline functions:
+	// // Sheep Button Hotspot and 'indicator':
 	this.frame_278 = function() {
-		/* Mouse Over Event
-		Mousing over the symbol instance executes a function in which you can add your own custom code.
 		
-		Instructions:
-		1. Add your custom code on a new line after the line that says "// Start your custom code" below.
-		The code will execute when the symbol instance is moused over.
-		frequency is the number of the times event should be triggered.
-		*/
-		var frequency = 3;
+		var frequency = 1;
 		stage.enableMouseOver(frequency);
 		let baaCodeButton = this.baacodeButton;
-		baaCodeButton.addEventListener("mouseover", fl_MouseOverHandler);
-		
-		function fl_MouseOverHandler()
-		{
-			baaCodeButton.y-=10;
-		}
-		
-			
-		
+	
+		setInterval(function(){{
+			baaCodeButton.y-=2;
+			setTimeout(function(){baaCodeButton.y+=2;},100);
+		}},200);
+	
 		baaCodeButton.addEventListener("click", fl_MouseClickHandler.bind(this))
 		
 		function fl_MouseClickHandler()

@@ -17,51 +17,58 @@
       "menu"
       "footer"
     ;
-  
+
     justify-items: center;
   }
-  
-  #animation_container {
-    grid-area: animation;
-    // max-width: 500px;
-    // max-height: 300px;
-  
+
+  .textGrid {
+    grid-area: handwriting;
+    transform: translate(-33%, 0);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 100%;
   }
-  
+
   .menu {
     grid-area: menu;
     justify-self: center;
     z-index: 2;
   }
-  
+
 }
-   
+
 @media (min-width: $breakpointDesktop) {
 
   .grid {
     display: grid;
-    grid-template-columns: minMax(100px, 1fr);
+    grid-template-columns: minMax(300px, 1fr);
     grid-template-areas:
-      "handwriting"
-      "animation"
-      "menu"
-      "footer"
+      "menu animation animation"
+      "footer animation animation"
+      "handwriting handwriting handwriting"
     ;
-  
+
     justify-items: center;
   }
-  
-  #animation_container {
-    grid-area: animation;
-    // max-width: 500px;
-    // max-height: 300px;
-  
+
+  .textGrid {
+    grid-area: handwriting;
+    transform: translate(-33%, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
   }
-  
+
   .menu {
     grid-area: menu;
     justify-self: center;
     z-index: 2;
+    padding-top: 4rem;
   }
 }
-   
+
+.foot{
+  align-self: center;
+}
