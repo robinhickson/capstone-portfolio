@@ -1,87 +1,45 @@
-
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
 
-body{
-  background-color: rgb(242,242,242);
 
-  
-}
 
-.mainGrid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(8, minMax(10px, 1fr));
-  grid-template-rows: repeat(8, minMax(10px, 1fr));
-  border: solid 5px black;
+  grid-template-columns: minMax(100px, 1fr);
+  grid-template-areas:
+    "handwriting"
+    "animation"
+    "menu"
+    "footer"
+  ;
+
+  justify-items: center;
 }
 
-.mainGrid >div::before {
-  
-  content:"";
-  padding-bottom: 100%;
-  display: block;
-
-}
-
-//Nested grids
-
-.mainGrid > div{
-  display: grid;
- 
-}
-
-
- .mainGrid > div > *{
-  grid-area: 1/1/2/2;
-
-
-}
-
-.white-square::before{
-  background-color: rgb(242,242,242);
-}
-
-//Cube structure
-
-
-.cube {
-  width: $size;
-  height: $size;
-  position: relative;
-  margin: 20vh auto;
-  perspective: 1000px;
-  transform-style: preserve-3d;
- 
-}
-.cube-face {
-  width: inherit;
-  height: inherit;
+.textGrid {
+  grid-area: handwriting;
+ transform: translate(-33%,0);
   position: absolute;
+  top: 25%;
+  left:50%;
+  width: 100%;
+ 
+}
+
+#animation_container {
+  grid-area: animation;
+  // max-width: 500px;
+  // max-height: 300px;
+
+}
+
+.menu {
+  grid-area: menu;
+  justify-self: center;
+  z-index: 2;
+}
+
+.foot {
   
-}
-
-
-.face-front {
-  transform: translate3d(0, 0, $size/2);
-}
-
-.face-back {
-  transform: rotateY(180deg) translate3d(0, 0, $size/2);
-}
-
-.face-left {
-  transform: rotateY(-90deg) translate3d(0, 0, $size/2);
-}
-
-.face-right {
-  transform: rotateY(90deg) translate3d(0, 0, $size/2);
-}
-
-.face-top {
-  transform: rotateX(90deg) translate3d(0, 0, $size/2);
-}
-
-.face-bottom {
-  transform: rotateX(-90deg) translate3d(0, 0, $size/2);
 }

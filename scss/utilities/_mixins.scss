@@ -1,6 +1,6 @@
 // Mixins
 
-@mixin flex-column-nowrap-border-top{
+@mixin nowrap-border-top{
     display: flex;
     flex-flow: column nowrap;
     border-top: solid 1px rgba(0,0,0,0.2);

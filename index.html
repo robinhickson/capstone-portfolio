@@ -5,54 +5,99 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio</title>
-    <meta name="description"
-        content="Portfolio showcase. First loaded page: animated SVG lettering 'not everything is black or white'.">
+    <title>| BaaCode Home |</title>
+    <meta name="description" content="Portfolio showcase">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="https://use.typekit.net/qrn6vpk.css">
     
- <script src="app.js" async defer></script>
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="JS/baa_code_v6_HTML_Canvas.js"></script>
-<script>
-var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-function init() {
-	canvas = document.getElementById("canvas");
-	anim_container = document.getElementById("animation_container");
-	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("A5B1A7CA691A6945AFB139416CB98269");
-	var lib=comp.getLibrary();
-	createjs.MotionGuidePlugin.install();
-	handleComplete({},comp);
-}
-function handleComplete(evt,comp) {
-	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-	var lib=comp.getLibrary();
-	var ss=comp.getSpriteSheet();
-	exportRoot = new lib.baa_code_v5_HTML_Canvas();
-	stage = new lib.Stage(canvas);	
-	//Registers the "tick" event listener.
-	fnStartAnimation = function() {
-		stage.addChild(exportRoot);
-		createjs.Ticker.framerate = lib.properties.fps;
-		createjs.Ticker.addEventListener("tick", stage);
-	}	    
-	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);	
-	AdobeAn.compositionLoaded(lib.properties.id);
-	fnStartAnimation();
-}
-</script>
-<!-- write your code here -->
+    <script src="JS/baa_code_v12_HTML5 Canvas.js"></script>
+    <script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+
+        function init() {
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            dom_overlay_container = document.getElementById("dom_overlay_container");
+            var comp = AdobeAn.getComposition("E4FE8167CD6B0B42B67937A382A0DD78");
+            var lib = comp.getLibrary();
+            createjs.MotionGuidePlugin.install();
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", function (evt) {
+                handleFileLoad(evt, comp)
+            });
+            loader.addEventListener("complete", function (evt) {
+                handleComplete(evt, comp)
+            });
+            var lib = comp.getLibrary();
+            loader.loadManifest(lib.properties.manifest);
+        }
+
+        function handleFileLoad(evt, comp) {
+            var images = comp.getImages();
+            if (evt && (evt.item.type == "image")) {
+                images[evt.item.id] = evt.result;
+            }
+        }
+
+        function handleComplete(evt, comp) {
+            //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+            var lib = comp.getLibrary();
+            var ss = comp.getSpriteSheet();
+            var queue = evt.target;
+            var ssMetadata = lib.ssMetadata;
+            for (i = 0; i < ssMetadata.length; i++) {
+                ss[ssMetadata[i].name] = new createjs.SpriteSheet({
+                    "images": [queue.getResult(ssMetadata[i].name)],
+                    "frames": ssMetadata[i].frames
+                })
+            }
+            var preloaderDiv = document.getElementById("_preload_div_");
+            preloaderDiv.style.display = 'none';
+            canvas.style.display = 'block';
+            exportRoot = new lib.baa_code_v12_HTML5Canvas();
+            stage = new lib.Stage(canvas);
+            //Registers the "tick" event listener.
+            fnStartAnimation = function () {
+                stage.addChild(exportRoot);
+                createjs.Ticker.framerate = lib.properties.fps;
+                createjs.Ticker.addEventListener("tick", stage);
+            }
+            //Code to support hidpi screens and responsive scaling.
+            AdobeAn.makeResponsive(true, 'both', true, 1, [canvas, preloaderDiv, anim_container,
+                dom_overlay_container
+            ]);
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+        }
+    </script>
+
 </head>
-<body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1086px; height:768px">
-		<canvas id="canvas" width="1086" height="768"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1086px; height:768px;  display: block;">
-		</div>
-	</div>
-   
+
+<body onload="init();">
+    <div id='_preload_div_'> <span style='display: inline-block; height: 100%; vertical-align: middle;'></span> <img
+            src=images/_preloader.gif style='vertical-align: middle; max-height: 100%' /></div>
+
+    <div class="grid">
+
+        <div id="animation_container" style="width:1347px; height:807px">
+            <canvas id="canvas" width="1347" height="807"></canvas>
+            <div id="dom_overlay_container"
+                style="pointer-events:none; overflow:hidden; width:1347px; height:807px; display: none;">
+            </div>
+        </div>
+
+        <div class="menu">
+            <h1 class="title">BAACODE</h1>
+            <h4 class="title">designed for fun</h4>
+        </div>
+        <div class="textGrid">       
+      
+        </div>
+        <footer class="foot"></footer>
+    </div>
+    <script src="JS/app.js"></script>
 </body>
 
 </html>

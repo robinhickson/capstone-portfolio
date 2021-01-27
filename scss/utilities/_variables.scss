@@ -7,7 +7,7 @@
 /* ============================================= */
 
 //variable colors
-$primary-color: rgb(32, 13, 100, .8);
+$primary-color: rgba(233, 85, 233, 0.8);
 $secondary-color:rgba(119,119,119, .6);
 
 $error: #e4757a;
@@ -25,9 +25,12 @@ $white: whitesmoke;
 
 /* ============================================= */
 
-$primary-font: 'Nasalization', sans-serif;
-$font-light: 300;
+$primary-font: 'industry-inc-3D', sans-serif;
+$font-light: 400;
 $font-bold: 700;
+$font-italic: italic;
+$font-normal: normal;
+
 
 
 /*              Others                            */
@@ -38,6 +41,6 @@ $font-bold: 700;
 //breakpoints
 $breakpointTablet: 768px;
 //breakpoints
-$breakpointDesktop: 1024px;
+$breakpointDesktop: 1075px;
  // cube length
 $size: 1000px;

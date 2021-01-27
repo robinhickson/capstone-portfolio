@@ -6,7 +6,62 @@
 
 /* ============================================= */
 
-@media (min-width: $breakpointTablet) {}
+@media (min-width: $breakpointTablet) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: minMax(100px, 1fr);
+    grid-template-areas:
+      "handwriting"
+      "animation"
+      "menu"
+      "footer"
+    ;
+  
+    justify-items: center;
+  }
+  
+  #animation_container {
+    grid-area: animation;
+    // max-width: 500px;
+    // max-height: 300px;
+  
+  }
+  
+  .menu {
+    grid-area: menu;
+    justify-self: center;
+    z-index: 2;
+  }
+  
+}
    
-@media (min-width: $breakpointDesktop) {}
+@media (min-width: $breakpointDesktop) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: minMax(100px, 1fr);
+    grid-template-areas:
+      "handwriting"
+      "animation"
+      "menu"
+      "footer"
+    ;
+  
+    justify-items: center;
+  }
+  
+  #animation_container {
+    grid-area: animation;
+    // max-width: 500px;
+    // max-height: 300px;
+  
+  }
+  
+  .menu {
+    grid-area: menu;
+    justify-self: center;
+    z-index: 2;
+  }
+}
    

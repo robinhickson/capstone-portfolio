@@ -4,6 +4,16 @@
 /* ============================================= */
 
 
-#animation_container{
-  margin: 0 auto;
+#_preload_div_ {
+	position:absolute;
+	right:50%;
+	top:50%;
   }
+
+ 
+
+  #dom_overlay_container, #canvas{
+   border-radius: 15% 15% 1% 1%; 
+   box-shadow: rgb(1, 0, 3) 0 -1em 15em 10em, rgb(5, 0, 80) 8em 2em 8em 8em;      
+  }
+  
