@@ -404,6 +404,8 @@ body {
 #animation_container {
   grid-area: animation;
   max-height: 90vh;
+  display: flex;
+  justify-content: center;
 }
 
 .menu {
