@@ -5,40 +5,36 @@
 //Globals
 
 const overlay = document.querySelector(".overlay");
-const modalContent = document.querySelector(".modal-content");
+const modalIcons = document.querySelector(".modal-icons");
 const modal = document.querySelector(".modal");
+const modalContainer = document.querySelector('.modalContainer');
 const modalClose = document.querySelector(".modal-close");
 const modalNext = document.querySelector(".modal-next");
 const modalPrevious = document.querySelector(".modal-previous");
+const projectsCollection = [];
 
 //Project Objects
 
-const projects = [{
-        name: "GetShot",
-        genre: "Business",
-        theme: "Portfolio",
-        url: "",
-        repo: "",
-        thumbnail: "",
-        description: "",
-        techniques: {
-            responsive: true,
-            sass: false,
-            html: "html5",
-            grid: true,
-            animation: true,
-            svg: true,
-            javascript: true,
-            flexbox: true,
-            gallery: false,
-            search: false,
+let Project = class {
+    constructor(projectname, genre, theme, url, repo, thumbnail, description, extended, techniques, lighthouse) {
+        this.projectname = projectname;
+        this.genre = genre;
+        this.theme = theme;
+        this.url = url;
+        this.repo = repo;
+        this.thumbnail = thumbnail;
+        this.description = description;
+        this.extended = extended;
+        this.techniques = techniques;
+        this.lighthouse = lighthouse;
 
+        //Class collection
+        this.pushProject = function () {
+            projectsCollection.push(this);
         }
-
-    },
-    {},
-
-];
+        this.pushProject();
+    }
+};
 
 
 //Change text for intro animation
@@ -95,21 +91,47 @@ function StopSound(soundobj) {
 
 function displayModal() {
 
-
     const modalHTML = `
-    <div class="modalContainer">
-    <input class="searchBox" type="text" name="search" id="search" onkeyup="searchKeywords(value)" placeholder="Search for techniques e.g. grid">
-         
-    <img class="project_icon" src="media/_preloader.gif" />
-    <div class="text-container"></div>
+    <div class="iconsContainer">
+    
     </div>
 `;
 
     overlay.classList.remove("hidden");
-    modalContent.innerHTML = modalHTML;
 
+    // Add the project icons dynamically to allow for filtering
+    modalContainer.innerHTML = modalHTML;
 
-}
+    projectsCollection.forEach(project=> {
+        // get container and project object elements
+        let iconsContainer = document.querySelector('.iconsContainer');
+        
+        let projectShortDescription = project.description;
+
+        //build the elements of each project detail
+        let imageIconDiv = document.createElement("div");
+        imageIconDiv.setAttribute("class", "modalProjectIcon");
+        let iconDescriptionText = document.createElement("h4");
+        iconDescriptionText.setAttribute("class", "shortDescription");
+        iconDescriptionText.textContent = projectShortDescription;
+
+        //get anchor and icon image for each project
+        let iconLink = document.createElement("a");
+        iconLink.setAttribute("class", "iconLink");
+        iconLink.setAttribute("id", project.projectname);
+        iconLink.setAttribute("href", project.url);
+        iconLink.setAttribute("target", "_blank");
+        
+              
+        iconLink.innerHTML = project.thumbnail;
+       
+
+        //assemble the parts
+        iconLink.append(iconDescriptionText);
+        imageIconDiv.append(iconLink);
+        iconsContainer.prepend(imageIconDiv);
+    });
+};
 
 //-----button functions
 
@@ -134,10 +156,10 @@ modal.addEventListener('click', e => {
 //--------search function
 
 let search = document.getElementById('search');
-search.addEventListener('keyup', e => {
-    let searchValue = search.value.toLowerCase();
-    searchKeywords(searchValue);
-})
+// search.addEventListener('keyup', e => {
+//     let searchValue = search.value.toLowerCase();
+//     searchKeywords(searchValue);
+// })
 
 
 function searchKeywords(value) {
@@ -169,3 +191,165 @@ function searchKeywords(value) {
     });
 
 }
+//--- Modal projects definition
+
+let getshot = new Project("GETSHOT", "Business", "Portfolio",
+    "https://robinhickson.github.io/getshotproject/",
+    "https://github.com/robinhickson/getshotproject",
+    `
+    <svg class="modalIcon" id="getshotIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 64.6 65.6" style="enable-background:new 0 0 64.6 65.6;" xml:space="preserve">
+    <g>
+        <path style="fill:none;" d="M63.9,58.5c-0.8,0.1-1.6,0.1-2.2,0.1c-3.4,0-4.7-0.8-5.2-1.3c-0.6-0.6-0.8-1.5-0.8-2.3
+            c0-0.6,0.1-1.2,0.2-1.8C67.7,39.9,66.4,19.7,53.1,8S19.6-2.4,8,10.9S-2.4,44.3,10.8,56c10.8,9.5,26.6,10.6,38.6,2.8
+            c0.5,1.3,1.2,2.4,2.1,3.4c2.2,2.3,5.6,3.4,10,3.4h0.1c0.9,0,1.9,0,2.9-0.1L63.9,58.5z M14.5,41c-4.4,0-7.9-4-7.9-9s3.5-9,7.9-9
+            s7.9,4,7.9,9S18.9,41,14.5,41z M32,57.4c-5,0-9-3.5-9-7.9s4-7.9,9-7.9s9,3.5,9,7.9S37,57.4,32,57.4z M27.7,32
+            c0-2.4,1.9-4.3,4.3-4.3s4.3,1.9,4.3,4.3s-1.9,4.3-4.3,4.3S27.7,34.4,27.7,32L27.7,32z M32,22.4c-5,0-9-3.5-9-7.9s4-7.9,9-7.9
+            s9,3.5,9,7.9S37,22.4,32,22.4z M41.6,32c0-5,3.5-9,7.9-9s7.9,4,7.9,9s-3.5,9-7.9,9S41.6,37,41.6,32z"/>
+    </g>
+    </svg>
+    `,
+    "Client Portfolio",
+    "A prototype of a website for a start-up company providing media services.",
+    ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'audio', 'video', 'grid', 'flexbox', 'accessible', ],
+    {
+        performance: 63,
+        accessibility: 97,
+        bestpractices: 87,
+        seo: 100
+    }
+);
+
+let dashboard = new Project("Dashboard", "Business", "Dashboard",
+    "https://robinhickson.github.io/dashboard/",
+    "https://github.com/robinhickson/dashboard",
+    `<svg class="modalIcon" id="dashboardIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 64.6 65.6" style="enable-background:new 0 0 64.6 65.6;" xml:space="preserve">
+<g>
+   <g>
+       <path style="fill:none;" d="M51.8,18.7H24.9v46.2H64V30.7L51.8,18.7z M51.2,23.7l7.2,7.1h-7.2V23.7z M60,60.9H28.9V22.7h19.3v11.1
+           H60V60.9z"/>
+       <path style="fill:none;" d="M5.6,53.4V12.7c0-0.5,0.5-1,1-1h6.9c-1.1,1.1-1.9,2.4-1.9,4h24c0-1.6-0.8-2.9-1.9-4h6.9
+           c0.5,0,1,0.5,1,1v3h5v-3c0-3.3-2.7-6-6-6H30.3c-0.1-3.6-3.1-6.6-6.7-6.6c-3.7,0-6.6,2.9-6.7,6.6H6.6c-3.3,0-6,2.7-6,6v40.7
+           c0,3.3,2.7,6,6,6h15.3v-5H6.6C6.1,54.4,5.6,54,5.6,53.4z M23.6,4.1c1.5,0,2.8,1.2,2.8,2.8c0,1.5-1.2,2.7-2.8,2.7
+           c-1.5,0-2.7-1.2-2.7-2.7C20.8,5.4,22.1,4.1,23.6,4.1z"/>
+   </g>
+</g>
+</svg>`,
+    "Intranet Dashboard",
+    "A working example of an interactive dashboard (e.g. for intranet). Includes a unique 'name' search engine that I wrote from scratch in Javascript (rather than borrow from a library). The dashboard makes use of Charts.js for interactive data views, and is responsive and accessible. Features include 'Read More.. Read less..' buttons for messages, and Local Storage save/clear functions.",
+    "A",
+    ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'sass', 'grid', 'flexbox', ],
+    {
+        performance: 63,
+        accessibility: 97,
+        bestpractices: 87,
+        seo: 100
+    }
+);
+
+let gallery = new Project("Gallery", "Personal", "Portfolio",
+    "https://robinhickson.github.io/grid-gallery/",
+    "https://github.com/robinhickson/grid-gallery",
+    `<svg class ='modalIcon' id="galleryIcon" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 66 52.3'>
+    <path d='M57.9 8.5l-4.1-5.8A7.05 7.05 0 0048.6 0h-6.1a6.73 6.73 0 00-5.2 2.7l-4 5.6H10a10 10 0 00-10 10v24a10 10 0 0010 10h46a10 10 0 0010-10v-24a10.13 10.13 0 00-8.1-9.8zM41.4 5.7a1 1 0 01.5-.4 1.42 1.42 0 01.6-.2h6.1a1.42 1.42 0 01.6.2 1 1 0 01.5.4l1.9 2.7H39.5zM31 44.3a14.2 14.2 0 1114.2-14.2A14.19 14.19 0 0131 44.3zM6 42.4v-24a4 4 0 014-4h6.7a21.18 21.18 0 00-1.5 29.9c.7.7 1.4 1.4 2.2 2.1H10a4.08 4.08 0 01-4-4zm54 0a4 4 0 01-4 4H44.6a21.24 21.24 0 002.7-29.9 13.36 13.36 0 00-2-2.1H56a4 4 0 014 4z' fill='none'/>
+  </svg>`,
+    "Gallery",
+    "A responsive, searchable gallery.",
+    ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'photo', 'sass', 'grid', 'flexbox', ],
+    {
+        performance: 63,
+        accessibility: 97,
+        bestpractices: 87,
+        seo: 100
+    }
+);
+
+let firstwebsite = new Project("First Website", "Personal", "Portfolio",
+    "https://robinhickson.github.io/personal/",
+    "https://github.com/robinhickson/personal",
+    `
+    <svg class="modalIcon" id="firstwebsiteIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 67 62.2" style="enable-background:new 0 0 67 62.2;" xml:space="preserve">
+    <g >
+            <path style="fill:none;" d="M63,14.9c-0.4,0-0.9,0.1-1.2,0.2l-9.4,3.6c-0.7-0.6-1.4-1-2.2-1.3L7.1,1.8C6.6,1.6,5.9,1.5,5.3,1.5
+                        c-2.2,0-3.8,1.7-3.8,4.3v42.4c0,2.6,1.6,4.2,3.7,4.2c0.6,0,1.3-0.1,1.9-0.4l27.4-10.5c0.3,0.8,0.7,1.6,1.1,2.3
+                        c1.7,2.7,4.8,4.4,8,4.3h0.1H44c0,0.1,0.1,0.3,0.1,0.4L50.3,60c0.5,0.8,1.5,1,2.2,0.6c0.1-0.1,0.2-0.2,0.3-0.3l7.3-6.8
+                        c0.8-0.8,1-2,0.4-3l-2.8-5.4c-0.4-1.3-0.8-2.6-1-3.9L56,36.6c0-0.8,0-2.1,0-2.8l5.7,2.2c0.4,0.2,0.8,0.2,1.2,0.2
+                        c1.4,0,2.5-1.2,2.5-2.5c0-0.1,0-0.2,0-0.3V17.7c0.2-1.4-0.8-2.6-2.2-2.8C63.2,14.9,63.1,14.9,63,14.9z M7.5,8.4l40.6,14.7
+                        c0.2,0.1,0.4,0.2,0.6,0.4c0,0.2-0.1,0.5-0.1,0.7V27c0,0.7,0.2,1.4,0.5,2.1c-0.3,0.4-0.7,0.7-1.1,0.9L7.5,45.5V8.4z M39,41.7
+                        c-0.3-0.5-0.6-1-0.7-1.6l4.2-1.6l0.8,5.5C41.5,44.1,39.9,43.2,39,41.7z"/>
+            
+    </g>
+    </svg>
+    `,
+    "Personal portfolio",
+    "My first ever attempt at a fully responsive website.",
+    ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'audio', 'video', 'grid', 'flexbox', ],
+    {
+        performance: 63,
+        accessibility: 97,
+        bestpractices: 87,
+        seo: 100
+    }
+);
+
+let forms = new Project("Forms", "Business", "Custom forms",
+    "https://robinhickson.github.io/forms/",
+    "https://github.com/robinhickson/forms",
+    `
+    <svg class="modalIcon" id="formsIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 66.9 67.4" style="enable-background:new 0 0 66.9 67.4;" xml:space="preserve">
+    <g >
+        
+                        <path style="fill:none;" d="M25.8,11.6V9.5h5.9v2.1c0,1.1,0.9,2,2,2h0.5c1.1,0,2-0.9,2-2V9.5H42v2.1c0,1.1,0.9,2,2,2h0.5
+                            c1.1,0,2-0.9,2-2V9.5h1.2l3.8,3.7v6h4v-7.7l-6.2-6.1h-2.8v-2c0-1.1-0.9-2-2-2H44c-1.1,0-2,0.9-2,2v2h-5.8v-2c0-1.1-0.9-2-2-2
+                            h-0.5c-1.1,0-2,0.9-2,2v2h-5.9v-2c0-1.1-0.9-2-2-2h-0.5c-1.1,0-2,0.9-2,2v2h-5.8v-2c0-1.1-0.9-2-2-2H13c-1.1,0-2,0.9-2,2v2H1.5
+                            v60h17.7l1-4H5.5v-52H11v2.1c0,1.1,0.9,2,2,2h0.5c1.1,0,2-0.9,2-2v-2h5.8v2.1c0,1.1,0.9,2,2,2h0.5
+                            C24.9,13.6,25.8,12.7,25.8,11.6z"/>
+                        <path style="fill:none;" d="M64.2,31.9l-6.4-6.4c-1.5-1.5-4-1.6-5.6-0.1l0,0L28.9,48.8l-0.5,0.5l-4,16.1l16.1-4l1.5-1.6l0,0
+                            l22.3-22.3l0,0C65.8,35.9,65.7,33.4,64.2,31.9z M30,50.9l8.8,8.8l-8.3,2.1L28,59L30,50.9z M40.4,54.2l-5-5l16.8-16.7l5,5
+                            L40.4,54.2z"/>
+                    
+    </g>
+    </svg>
+    `,
+    "Custom forms",
+    "A custom form, showcasing most features of front-end form creation, with a special focus on accessibility.",
+    ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'audio', 'video', 'grid', 'flexbox', ],
+    {
+        performance: 63,
+        accessibility: 97,
+        bestpractices: 87,
+        seo: 100
+    }
+);
+
+
+let boxingclever = new Project("Boxing Clever", "Personal", "Simple game",
+    "https://robinhickson.github.io/game/",
+    "https://github.com/robinhickson/game",
+     `<svg class="modalIcon" id="gameIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 68 46.4" style="enable-background:new 0 0 68 46.4;" xml:space="preserve">
+<g>
+	
+						<path style="fill:none;" d="M60.3,9.5C51.8-4.4,39.1,5.3,39.1,5.3c-1,0.7-2.2,1.1-3.4,1.1h-3.4c-1.2-0.1-2.4-0.4-3.4-1.1
+							c0,0-12.7-9.7-21.2,4.2s-5.1,29-5.1,29c0.6,3.7,2.6,6.2,6.3,5.9s11.7-10,11.7-10c0.8-0.8,1.9-1.4,3.1-1.4h20.4
+							c1.2,0.1,2.3,0.6,3.1,1.5c0,0,8,9.7,11.7,10s5.7-2.2,6.3-5.9C65.3,38.5,68.7,23.4,60.3,9.5z M27.5,15.1v4.7h-4.8v4.8h-5.1
+							v-4.8h-4.8v-5.1h4.8V9.9h5.1v4.8h4.8V15.1z M46.4,25.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5
+							C49.9,24.1,48.4,25.6,46.4,25.6L46.4,25.6L46.4,25.6z M46.4,16.1c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5
+							S48.4,16.1,46.4,16.1L46.4,16.1L46.4,16.1z M55.1,21.2c-1.9,0-3.5-1.5-3.5-3.4s1.5-3.5,3.4-3.5s3.5,1.5,3.5,3.4l0,0
+							C58.5,19.6,57,21.2,55.1,21.2L55.1,21.2z"/>
+					
+</g>
+</svg>`,
+    "Game",
+    "A simple interactive word game, based on quotes from famous boxers.",
+    ['responsive', 'html5', 'html', 'css', 'css3', 'javascript', 'grid', 'flexbox', ],
+    {
+        performance: 98,
+        accessibility: 83,
+        bestpractices: 100,
+        seo: 92
+    }
+);

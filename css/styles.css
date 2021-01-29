@@ -370,12 +370,12 @@ h1, h2, h3, h4 {
 
 body {
   background-image: radial-gradient(closest-corner at 10%, #010003, #0d0531 1px);
+  font-family: "industry-inc-3D", sans-serif;
 }
 
 .title {
   text-align: center;
   color: rgba(233, 85, 233, 0.8);
-  font-family: "industry-inc-3D", sans-serif;
   font-style: normal;
   font-weight: 400;
   padding-top: 1rem;
@@ -434,7 +434,7 @@ body {
   position: absolute;
   top: 15%;
   left: 50%;
-  width: 100%;
+  width: 90%;
 }
 
 #animation_container {
@@ -485,35 +485,89 @@ body {
 }
 
 .modal {
-  width: 375px;
-  margin: 15% auto auto;
+  width: 80%;
+  margin: 10% auto auto;
   position: relative;
   text-align: center;
-  background: whitesmoke;
-  border: 2px solid rgba(20, 1, 1, 0.6);
+  background: rgba(149, 148, 170, 0.95);
   border-radius: 5px;
   padding: 30px 20px;
+  z-index: 100;
 }
 
 .hidden {
   display: none;
 }
 
+.iconsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.modalProjectIcon {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.modalProjectIcon:hover {
+  border: violet 1px solid;
+  border-radius: 5px;
+}
+
+.shortDescription {
+  font-family: Liana, sans-serif;
+  color: whitesmoke;
+}
+
+.modalIcon {
+  height: 64px;
+  width: 64px;
+  padding: 10px;
+  stroke: whitesmoke;
+  stroke-width: 2px;
+}
+
+#getshotIcon:hover {
+  stroke: orange;
+}
+
+#dashboardIcon:hover {
+  stroke: yellow;
+}
+
+#galleryIcon:hover {
+  stroke: green;
+}
+
+#formsIcon:hover {
+  stroke: blue;
+}
+
+#gameIcon:hover {
+  stroke: red;
+}
+
+#firstwebsiteIcon:hover {
+  stroke: violet;
+}
+
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
 .searchBox {
+  font-family: monospace;
   height: 2em;
   margin: 2rem;
-  background-color: rgba(119, 119, 119, 0.6);
-  color: black;
+  background-color: rgba(221, 221, 221, 0.6);
+  outline-style: none;
+  border: none;
   border-radius: 5px;
 }
 .searchBox:hover, .searchBox:focus {
   background-color: white;
   color: black;
-  border: 2px solid black;
-  outline: none;
+  border: 1px solid black;
   cursor: inherit;
 }
 

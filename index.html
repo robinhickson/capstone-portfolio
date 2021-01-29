@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/qrn6vpk.css">
     <link rel="stylesheet" href="https://use.typekit.net/gmz4zqm.css">
+
     <script src="https://kit.fontawesome.com/fd87de730e.js" crossorigin="anonymous"></script>
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="JS/baa_code_v12_HTML5 Canvas.js"></script>
@@ -105,18 +106,20 @@
 
         </div>
         <footer class="foot">
-           
+
             <div class="signature"><span class="copyright">Web Design by&nbsp;<i
                         class="fas fa-copyright"></i>&nbsp;&nbsp;</span><a href="https://www.writecodesign.com"
-                    target="_blank">writecodesign</a></div>
+                    target="_blank" rel="noreferrer">writecodesign</a></div>
         </footer>
     </div>
     <div class="overlay hidden">
         <div class="modal">
             <button class="modal-close">X</button>
             <button class="modal-previous">&lt;</button>
-            <div class="modal-content">
-
+            <input class="searchBox" type="text" name="search" id="search" onkeyup="searchKeywords(value)"
+                    placeholder="Search for techniques e.g. grid">
+            <div class="modalContainer">
+            
             </div>
 
             <button class="modal-next">&gt;</button>
