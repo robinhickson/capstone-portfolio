@@ -7,17 +7,18 @@
 //search function
 
 .searchBox {
-  font-family: monospace;
-  height: 2em;
+  font-family: reross-quadratic, monospace;
+  color: $white;
+  width: 66%;
   margin: 2rem;
   background-color: $secondary-color-light;
   outline-style: none;
-  border: none;
+  border: none; 
   border-radius: 5px;
 
   &:hover,
   &:focus {
-    background-color: white;
+    background-color: $white;
     color: black;
     border: 1px solid black;
     cursor: inherit;

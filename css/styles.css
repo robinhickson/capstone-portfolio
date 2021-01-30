@@ -376,27 +376,35 @@ body {
 .title {
   text-align: center;
   color: rgba(233, 85, 233, 0.8);
-  font-style: normal;
-  font-weight: 400;
-  padding-top: 1rem;
+  font-family: montana-rough;
+  font-weight: 700;
+  font-size: 400%;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-.signature {
-  height: 2em;
+.title-bg {
+  text-align: center;
+  margin: 0 auto;
+  color: whitesmoke;
+  background-color: rgba(149, 148, 170, 0.95);
+  border-radius: 5px;
+  font-family: reross-quadratic, monospace;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .signature a {
   font-family: "Liana";
-  font-size: 5vh;
   color: #ca8d8d;
   margin-bottom: 0.2em;
 }
 
 .copyright {
-  font-family: "Reross Square", "Jakob";
-  font-size: 2vh;
-  color: #3f3f3f;
-  opacity: 0.5;
+  font-family: reross-quadratic, monospace;
+  font-size: 50%;
+  color: #ca8d8d;
+  opacity: 0.9;
 }
 
 .modal-close {
@@ -433,20 +441,24 @@ body {
   transform: translate(-33%, 0);
   position: absolute;
   top: 15%;
-  left: 50%;
-  width: 90%;
+  left: 45%;
+  width: 100%;
+  z-index: 4;
 }
 
 #animation_container {
   grid-area: animation;
-  max-height: 90vh;
   display: flex;
   justify-content: center;
+  z-index: 3;
 }
 
 .menu {
   grid-area: menu;
-  z-index: 2;
+  z-index: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 .foot {
@@ -455,6 +467,7 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   padding: 1em;
+  z-index: 5;
 }
 
 /* ============================================= */
@@ -469,7 +482,6 @@ body {
 #canvas {
   border-radius: 15% 15% 1% 1%;
   box-shadow: #010003 0 -5em 15em 10em, #050050 8em 2em 8em 8em;
-  max-height: 90vh;
 }
 
 /* ============================================= */
@@ -489,10 +501,10 @@ body {
   margin: 10% auto auto;
   position: relative;
   text-align: center;
-  background: rgba(149, 148, 170, 0.95);
+  background: #9594aa;
   border-radius: 5px;
   padding: 30px 20px;
-  z-index: 100;
+  z-index: 99;
 }
 
 .hidden {
@@ -511,12 +523,12 @@ body {
 }
 
 .modalProjectIcon:hover {
-  border: violet 1px solid;
+  border: violet 2px solid;
   border-radius: 5px;
 }
 
 .shortDescription {
-  font-family: Liana, sans-serif;
+  font-family: "reross-quadratic", monospace;
   color: whitesmoke;
 }
 
@@ -556,8 +568,9 @@ body {
 /*              Forms                            */
 /* ============================================= */
 .searchBox {
-  font-family: monospace;
-  height: 2em;
+  font-family: reross-quadratic, monospace;
+  color: whitesmoke;
+  width: 66%;
   margin: 2rem;
   background-color: rgba(221, 221, 221, 0.6);
   outline-style: none;
@@ -565,7 +578,7 @@ body {
   border-radius: 5px;
 }
 .searchBox:hover, .searchBox:focus {
-  background-color: white;
+  background-color: whitesmoke;
   color: black;
   border: 1px solid black;
   cursor: inherit;
@@ -581,10 +594,7 @@ body {
   position: absolute;
   right: 50%;
   top: 1%;
-}
-
-#toggle_mute:hover {
-  border: rgba(233, 85, 233, 0.8) 1px solid;
+  z-index: 99;
 }
 
 button {
@@ -594,7 +604,7 @@ button {
 }
 
 button:hover {
-  background-color: rgba(233, 85, 233, 0.8);
+  background-color: rgba(149, 148, 170, 0.6);
   color: whitesmoke;
 }
 

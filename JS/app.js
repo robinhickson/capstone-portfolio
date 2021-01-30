@@ -118,13 +118,9 @@ function displayModal() {
         //get anchor and icon image for each project
         let iconLink = document.createElement("a");
         iconLink.setAttribute("class", "iconLink");
-        iconLink.setAttribute("id", project.projectname);
-        iconLink.setAttribute("href", project.url);
-        iconLink.setAttribute("target", "_blank");
-        
-              
-        iconLink.innerHTML = project.thumbnail;
-       
+        iconLink.setAttribute("id", project.projectname);       
+        iconLink.setAttribute("onclick", "displayProjectInModal(this.id)");  
+        iconLink.innerHTML = project.thumbnail;       
 
         //assemble the parts
         iconLink.append(iconDescriptionText);
@@ -191,9 +187,19 @@ function searchKeywords(value) {
     });
 
 }
+
+let displayProjectInModal = function(target){
+    
+   projectsCollection.forEach(project => {
+       if (project.projectname === target){
+           console.log(project);
+       }
+   })
+
+}
 //--- Modal projects definition
 
-let getshot = new Project("GETSHOT", "Business", "Portfolio",
+let getshot = new Project("getshot", "Business", "Portfolio",
     "https://robinhickson.github.io/getshotproject/",
     "https://github.com/robinhickson/getshotproject",
     `
@@ -209,7 +215,7 @@ let getshot = new Project("GETSHOT", "Business", "Portfolio",
     </g>
     </svg>
     `,
-    "Client Portfolio",
+    "Portfolio",
     "A prototype of a website for a start-up company providing media services.",
     ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'audio', 'video', 'grid', 'flexbox', 'accessible', ],
     {
@@ -220,7 +226,7 @@ let getshot = new Project("GETSHOT", "Business", "Portfolio",
     }
 );
 
-let dashboard = new Project("Dashboard", "Business", "Dashboard",
+let dashboard = new Project("dashboard", "Business", "Dashboard",
     "https://robinhickson.github.io/dashboard/",
     "https://github.com/robinhickson/dashboard",
     `<svg class="modalIcon" id="dashboardIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -236,7 +242,7 @@ let dashboard = new Project("Dashboard", "Business", "Dashboard",
    </g>
 </g>
 </svg>`,
-    "Intranet Dashboard",
+    "Dashboard",
     "A working example of an interactive dashboard (e.g. for intranet). Includes a unique 'name' search engine that I wrote from scratch in Javascript (rather than borrow from a library). The dashboard makes use of Charts.js for interactive data views, and is responsive and accessible. Features include 'Read More.. Read less..' buttons for messages, and Local Storage save/clear functions.",
     "A",
     ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'sass', 'grid', 'flexbox', ],
@@ -248,7 +254,7 @@ let dashboard = new Project("Dashboard", "Business", "Dashboard",
     }
 );
 
-let gallery = new Project("Gallery", "Personal", "Portfolio",
+let gallery = new Project("gallery", "Personal", "Portfolio",
     "https://robinhickson.github.io/grid-gallery/",
     "https://github.com/robinhickson/grid-gallery",
     `<svg class ='modalIcon' id="galleryIcon" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 66 52.3'>
@@ -265,7 +271,7 @@ let gallery = new Project("Gallery", "Personal", "Portfolio",
     }
 );
 
-let firstwebsite = new Project("First Website", "Personal", "Portfolio",
+let firstwebsite = new Project("firstwebsite", "Personal", "Portfolio",
     "https://robinhickson.github.io/personal/",
     "https://github.com/robinhickson/personal",
     `
@@ -283,7 +289,7 @@ let firstwebsite = new Project("First Website", "Personal", "Portfolio",
     </g>
     </svg>
     `,
-    "Personal portfolio",
+    "Portfolio",
     "My first ever attempt at a fully responsive website.",
     ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'audio', 'video', 'grid', 'flexbox', ],
     {
@@ -294,7 +300,7 @@ let firstwebsite = new Project("First Website", "Personal", "Portfolio",
     }
 );
 
-let forms = new Project("Forms", "Business", "Custom forms",
+let forms = new Project("forms", "Business", "Custom forms",
     "https://robinhickson.github.io/forms/",
     "https://github.com/robinhickson/forms",
     `
@@ -314,7 +320,7 @@ let forms = new Project("Forms", "Business", "Custom forms",
     </g>
     </svg>
     `,
-    "Custom forms",
+    "Forms",
     "A custom form, showcasing most features of front-end form creation, with a special focus on accessibility.",
     ['responsive', 'svg', 'html5', 'html', 'css', 'css3', 'javascript', 'audio', 'video', 'grid', 'flexbox', ],
     {
@@ -326,7 +332,7 @@ let forms = new Project("Forms", "Business", "Custom forms",
 );
 
 
-let boxingclever = new Project("Boxing Clever", "Personal", "Simple game",
+let boxingclever = new Project("boxingclever", "Personal", "Simple game",
     "https://robinhickson.github.io/game/",
     "https://github.com/robinhickson/game",
      `<svg class="modalIcon" id="gameIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

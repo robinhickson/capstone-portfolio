@@ -11,11 +11,7 @@
     position: absolute;
     right: 50%;
     top: 1%;
-}
-
-
-#toggle_mute:hover{
-   border: $primary-color 1px solid;
+    z-index:99;
 }
 
 button {
@@ -25,7 +21,7 @@ button {
 }
 
 button:hover {
-    background-color: $primary-color;
+    background-color: $secondary-color;
     color: $white;
 }
 

@@ -13,8 +13,8 @@
     "menu"
     "footer"
   ;
-place-items: center;
-margin: 0 auto;
+  place-items: center;
+  margin: 0 auto;
 }
 
 .textGrid {
@@ -22,28 +22,31 @@ margin: 0 auto;
   transform: translate(-33%, 0);
   position: absolute;
   top: 15%;
-  left: 50%;
-  width: 90%;
+  left: 45%;
+  width: 100%;
+  z-index: 4;
 }
 
 #animation_container {
   grid-area: animation;
-max-height: 90vh;
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
 }
 
 .menu {
   grid-area: menu;
- 
-  z-index: 2;
+  z-index: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; 
 }
 
 .foot {
   grid-area: footer;
-  display:flex;
+  display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding: 1em;
+  z-index: 5;
 }
-

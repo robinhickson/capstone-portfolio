@@ -90,9 +90,9 @@
     </button>
     <div class="grid">
 
-        <div id="animation_container" style="width:1347px; height:807px" onmouseenter="PlaySound('player')"
+        <div id="animation_container" height="100%" onmouseenter="PlaySound('player')"
             onmouseleave="PlaySound('player')">
-            <canvas id="canvas" width="1347" height="807"></canvas>
+            <canvas id="canvas"></canvas>
             <div id="dom_overlay_container"
                 style="pointer-events:none; overflow:hidden; width:1347px; height:807px; display: none;">
             </div>
@@ -100,7 +100,7 @@
 
         <div class="menu">
             <h1 class="title">BAACODE</h1>
-            <h4 class="title">designed for fun</h4>
+            <p class="title-bg">designed for fun</p>
         </div>
         <div class="textGrid">
 
@@ -116,8 +116,8 @@
         <div class="modal">
             <button class="modal-close">X</button>
             <button class="modal-previous">&lt;</button>
-            <input class="searchBox" type="text" name="search" id="search" onkeyup="searchKeywords(value)"
-                    placeholder="Search for techniques e.g. grid">
+            <h1 class="title-bg">it's not all fun and games...</h1>
+            <input class="searchBox" type="text" name="search" id="search" onkeyup="searchKeywords(value)">
             <div class="modalContainer">
             
             </div>

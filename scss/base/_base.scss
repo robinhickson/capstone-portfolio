@@ -6,30 +6,36 @@ body{
 
 .title{
     text-align: center;
-    color:$primary-color;
-   
-    font-style: $font-normal;
-    font-weight: $font-light;    
-    padding-top: 1rem;
+    color:$primary-color;   
+    font-family: montana-rough;
+    font-weight: $font-bold; 
+    font-size: 400%;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
-  
-  .signature{
-    height: 2em;  
+  .title-bg{
+    text-align: center;
+    margin: 0 auto;
+    color: $white;
+    background-color:  rgba(149, 148, 170, 0.95);   
+    border-radius: 5px;
+    font-family: reross-quadratic, monospace;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
-  
+    
   .signature a{
     font-family: 'Liana';
-    font-size: 5vh;
-    color: #ca8d8d;
-    
+    // font-size: 2rem;
+    color: #ca8d8d;    
     margin-bottom: 0.2em;
   }
   .copyright{
-    font-family: 'Reross Square', 'Jakob';
-    font-size: 2vh;
-    color: #3f3f3f; 
-    opacity: 0.5;
+    font-family:  reross-quadratic, monospace;
+    font-size: 50%;
+    color:#ca8d8d;
+    opacity: 0.9;
     
     }
 

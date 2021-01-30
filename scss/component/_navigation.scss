@@ -16,10 +16,10 @@
   margin: 10% auto auto;
   position: relative;
   text-align: center;
-  background: rgba(149, 148, 170, 0.95);
+  background: rgba(149, 148, 170);
   border-radius: 5px;
   padding: 30px 20px;
-  z-index: 100;
+  z-index: 99;
 }
 
 .hidden {
@@ -38,12 +38,12 @@
 }
 
 .modalProjectIcon:hover{
-  border: violet 1px solid;
+  border: violet 2px solid;
   border-radius: 5px;
 }
 
 .shortDescription{
-  font-family: Liana, sans-serif;
+  font-family:  'reross-quadratic', monospace;
   color: $white;
 }
 
