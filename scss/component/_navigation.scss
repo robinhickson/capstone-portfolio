@@ -22,11 +22,15 @@
   z-index: 99;
 }
 
+.modalInner {
+  margin: 1rem 2rem;
+}
+
 .hidden {
   display: none;
 }
 
-.iconsContainer {
+.modalProjectContent {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -37,40 +41,122 @@
   padding: 1rem;
 }
 
-.modalProjectIcon:hover{
-  border: violet 2px solid;
+.modalProjectIconHover:hover {
+  border: $white 2px solid;
   border-radius: 5px;
 }
 
-.shortDescription{
-  font-family:  'reross-quadratic', monospace;
+.shortDescription {
+  font-family: 'reross-quadratic', monospace;
   color: $white;
 }
 
-.modalIcon {
+.modalIcon {  
   height: 64px;
   width: 64px;
   padding: 10px;
   stroke: $white;
   stroke-width: 2px;
-
 }
 
-#getshotIcon:hover{
-stroke: orange;
+#getshotIcon {
+  stroke: orange;
 }
-#dashboardIcon:hover{
- stroke: yellow; 
+
+#dashboardIcon {
+  stroke: yellow;
 }
-#galleryIcon:hover{
+
+#galleryIcon {
   stroke: green;
 }
-#formsIcon:hover{
+
+#formsIcon {
   stroke: blue;
 }
-#gameIcon:hover{
+
+#gameIcon {
   stroke: red;
 }
-#firstwebsiteIcon:hover{
+
+#firstwebsiteIcon {
   stroke: violet;
+}
+
+.modalIcon:hover {
+  stroke: $white;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+.modal-previous {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+}
+
+.modal-next {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+
+.extendedDescription {
+  text-align: center; 
+  margin: 2rem auto; 
+  color: $white;
+  font-family: montana-rough;
+  font-weight: $font-light;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+
+.toolTipContainer{
+  position: absolute;
+  top: 50%;  
+  width: 66%;
+  min-height: 100px;
+  }
+
+.toolTipContainer .toolTipTextPages { 
+  left: 0;
+ 
+}
+
+.toolTipContainer .toolTipTextRepo { 
+  right: 0;  
+}
+
+.extendedModal{
+  width: 80%; 
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+ }
+
+
+.extendedModal:hover .toolTipTextPages,
+.extendedModal:hover .toolTipTextRepo {
+  visibility: visible;
+}
+
+.toolTipTextPages, .toolTipTextRepo{
+  position: absolute;
+  visibility: hidden;
+  bottom: 0;
+  font-family: reross-quadratic;
+  padding: 2px; 
+  background-color: $secondary-color;
+  border-radius: 5px; 
+}
+
+.toolTipTextPages:hover, .toolTipTextRepo:hover{ 
+  background-color: $white; 
 }

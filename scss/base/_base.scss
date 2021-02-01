@@ -18,41 +18,35 @@ body{
     text-align: center;
     margin: 0 auto;
     color: $white;
-    background-color:  rgba(149, 148, 170, 0.95);   
+    background-color:  $secondary-color;   
     border-radius: 5px;
     font-family: reross-quadratic, monospace;
     padding-right: 1rem;
     padding-left: 1rem;
   }
     
-  .signature a{
+  .signature {
     font-family: 'Liana';
-    // font-size: 2rem;
+    font-size: 1rem;
     color: #ca8d8d;    
     margin-bottom: 0.2em;
   }
+
   .copyright{
-    font-family:  reross-quadratic, monospace;
-    font-size: 50%;
+    font-family:  reross-quadratic, monospace; 
+    font-size: 50%;   
     color:#ca8d8d;
-    opacity: 0.9;
-    
+       
     }
 
-  .modal-close {
-    position: absolute;
-    right: 15px;
-    top: 5px;
-}
+   .email {
+     display:block;
+      font-family: reross-quadratic, monospace;      
+      color:$primary-color;
+      font-weight: bold;
+      background-color: $white;
+      padding: 5px;
+      margin-bottom: 2px;
+      border-radius: 5px;     
+      }
 
-.modal-previous {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-}
-
-.modal-next {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-}

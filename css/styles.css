@@ -387,15 +387,16 @@ body {
   text-align: center;
   margin: 0 auto;
   color: whitesmoke;
-  background-color: rgba(149, 148, 170, 0.95);
+  background-color: rgba(149, 148, 170, 0.6);
   border-radius: 5px;
   font-family: reross-quadratic, monospace;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.signature a {
+.signature {
   font-family: "Liana";
+  font-size: 1rem;
   color: #ca8d8d;
   margin-bottom: 0.2em;
 }
@@ -404,25 +405,17 @@ body {
   font-family: reross-quadratic, monospace;
   font-size: 50%;
   color: #ca8d8d;
-  opacity: 0.9;
 }
 
-.modal-close {
-  position: absolute;
-  right: 15px;
-  top: 5px;
-}
-
-.modal-previous {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-}
-
-.modal-next {
-  position: absolute;
-  right: 15px;
-  top: 50%;
+.email {
+  display: block;
+  font-family: reross-quadratic, monospace;
+  color: rgba(233, 85, 233, 0.8);
+  font-weight: bold;
+  background-color: whitesmoke;
+  padding: 5px;
+  margin-bottom: 2px;
+  border-radius: 5px;
 }
 
 /* ============================================= */
@@ -466,8 +459,11 @@ body {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding: 1em;
+  margin: 1em;
+  padding: 10px;
   z-index: 5;
+  background-color: rgba(149, 148, 170, 0.6);
+  border-radius: 5px;
 }
 
 /* ============================================= */
@@ -507,11 +503,15 @@ body {
   z-index: 99;
 }
 
+.modalInner {
+  margin: 1rem 2rem;
+}
+
 .hidden {
   display: none;
 }
 
-.iconsContainer {
+.modalProjectContent {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -522,8 +522,8 @@ body {
   padding: 1rem;
 }
 
-.modalProjectIcon:hover {
-  border: violet 2px solid;
+.modalProjectIconHover:hover {
+  border: whitesmoke 2px solid;
   border-radius: 5px;
 }
 
@@ -540,28 +540,104 @@ body {
   stroke-width: 2px;
 }
 
-#getshotIcon:hover {
+#getshotIcon {
   stroke: orange;
 }
 
-#dashboardIcon:hover {
+#dashboardIcon {
   stroke: yellow;
 }
 
-#galleryIcon:hover {
+#galleryIcon {
   stroke: green;
 }
 
-#formsIcon:hover {
+#formsIcon {
   stroke: blue;
 }
 
-#gameIcon:hover {
+#gameIcon {
   stroke: red;
 }
 
-#firstwebsiteIcon:hover {
+#firstwebsiteIcon {
   stroke: violet;
+}
+
+.modalIcon:hover {
+  stroke: whitesmoke;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+.modal-previous {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+}
+
+.modal-next {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+
+.extendedDescription {
+  text-align: center;
+  margin: 2rem auto;
+  color: whitesmoke;
+  font-family: montana-rough;
+  font-weight: 400;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+
+.toolTipContainer {
+  position: absolute;
+  top: 50%;
+  width: 66%;
+  min-height: 100px;
+}
+
+.toolTipContainer .toolTipTextPages {
+  left: 0;
+}
+
+.toolTipContainer .toolTipTextRepo {
+  right: 0;
+}
+
+.extendedModal {
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.extendedModal:hover .toolTipTextPages,
+.extendedModal:hover .toolTipTextRepo {
+  visibility: visible;
+}
+
+.toolTipTextPages, .toolTipTextRepo {
+  position: absolute;
+  visibility: hidden;
+  bottom: 0;
+  font-family: reross-quadratic;
+  padding: 2px;
+  background-color: rgba(149, 148, 170, 0.6);
+  border-radius: 5px;
+}
+
+.toolTipTextPages:hover, .toolTipTextRepo:hover {
+  background-color: whitesmoke;
 }
 
 /* ============================================= */
@@ -599,7 +675,9 @@ body {
 
 button {
   cursor: pointer;
+  font-family: monospace;
   background-color: rgba(221, 221, 221, 0.6);
+  color: white;
   outline-style: none;
 }
 
