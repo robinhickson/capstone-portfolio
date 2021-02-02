@@ -8,9 +8,9 @@
 
 .searchBox {
   font-family: reross-quadratic, monospace;
-  color: $white;
+ 
   width: 66%;
-  margin: 2rem;
+  margin: 1rem;
   background-color: $secondary-color-light;
   outline-style: none;
   border: none; 
@@ -23,4 +23,11 @@
     border: 1px solid black;
     cursor: inherit;
   }
+}
+
+::placeholder{
+  color: $white;
+  text-align: center;
+  font-size: 50%;
+ 
 }

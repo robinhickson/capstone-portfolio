@@ -383,6 +383,16 @@ body {
   padding-left: 1rem;
 }
 
+.detailedModalTitle {
+  text-align: center;
+  background-color: rgba(221, 221, 221, 0.6);
+  font-family: reross-quadratic, montana-rough, monospace;
+  font-weight: 700;
+  font-size: 300%;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
 .title-bg {
   text-align: center;
   margin: 0 auto;
@@ -410,10 +420,12 @@ body {
 .email {
   display: block;
   font-family: reross-quadratic, monospace;
-  color: rgba(233, 85, 233, 0.8);
+  color: black;
   font-weight: bold;
   background-color: whitesmoke;
   padding: 5px;
+  padding-left: 4em;
+  padding-right: 4em;
   margin-bottom: 2px;
   border-radius: 5px;
 }
@@ -424,18 +436,17 @@ body {
 .grid {
   display: grid;
   grid-template-columns: minMax(100px, 1fr);
-  grid-template-areas: "handwriting" "animation" "menu" "footer";
+  grid-template-areas: "footer" "handwriting" "animation" "menu";
   place-items: center;
   margin: 0 auto;
 }
 
 .textGrid {
   grid-area: handwriting;
-  transform: translate(-33%, 0);
   position: absolute;
-  top: 15%;
-  left: 45%;
-  width: 100%;
+  top: 33%;
+  left: 20%;
+  width: 90%;
   z-index: 4;
 }
 
@@ -493,18 +504,19 @@ body {
 }
 
 .modal {
-  width: 80%;
+  width: 90%;
   margin: 10% auto auto;
   position: relative;
   text-align: center;
   background: #9594aa;
   border-radius: 5px;
   padding: 30px 20px;
+  opacity: 0.99;
   z-index: 99;
 }
 
 .modalInner {
-  margin: 1rem 2rem;
+  margin: 0.5rem 1rem;
 }
 
 .hidden {
@@ -515,15 +527,20 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
 .modalProjectIcon {
-  margin: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.modalProjectIconHover {
+  transition: 0.3s;
 }
 
 .modalProjectIconHover:hover {
   border: whitesmoke 2px solid;
+  border-style: inset;
   border-radius: 5px;
 }
 
@@ -577,32 +594,32 @@ body {
 .modal-previous {
   position: absolute;
   left: 15px;
-  top: 50%;
+  top: 20%;
 }
 
 .modal-next {
   position: absolute;
   right: 15px;
-  top: 50%;
+  top: 20%;
 }
 
 .extendedDescription {
+  white-space: pre-wrap;
   text-align: center;
-  margin: 2rem auto;
+  margin: 0.5rem auto;
   color: whitesmoke;
-  font-family: montana-rough;
+  font-family: reross-quadratic;
   font-weight: 400;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0.5rem;
   border: solid 1px white;
   border-radius: 5px;
 }
 
 .toolTipContainer {
   position: absolute;
-  top: 50%;
-  width: 66%;
+  width: 95%;
   min-height: 100px;
+  padding: 0.5rem;
 }
 
 .toolTipContainer .toolTipTextPages {
@@ -614,11 +631,12 @@ body {
 }
 
 .extendedModal {
-  width: 80%;
+  width: 95%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   margin: 0 auto;
+  border-radius: 5px;
 }
 
 .extendedModal:hover .toolTipTextPages,
@@ -626,18 +644,53 @@ body {
   visibility: visible;
 }
 
-.toolTipTextPages, .toolTipTextRepo {
+.toolTipTextPages,
+.toolTipTextRepo {
   position: absolute;
   visibility: hidden;
-  bottom: 0;
-  font-family: reross-quadratic;
+  top: 0;
+  font-family: reross-quadratic, monospace;
   padding: 2px;
   background-color: rgba(149, 148, 170, 0.6);
   border-radius: 5px;
 }
 
-.toolTipTextPages:hover, .toolTipTextRepo:hover {
+.toolTipTextPages:hover,
+.toolTipTextRepo:hover {
   background-color: whitesmoke;
+}
+
+.lighthouseContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  font-family: reross-quadratic, monospace;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.lighthouseGraphicContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  color: whitesmoke;
+  font-family: reross-quadratic, monospace;
+  margin: 1rem;
+}
+
+.lighthouseText {
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: rgba(221, 221, 221, 0.6);
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.score {
+  background-color: whitesmoke;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 5px;
 }
 
 /* ============================================= */
@@ -645,9 +698,8 @@ body {
 /* ============================================= */
 .searchBox {
   font-family: reross-quadratic, monospace;
-  color: whitesmoke;
   width: 66%;
-  margin: 2rem;
+  margin: 1rem;
   background-color: rgba(221, 221, 221, 0.6);
   outline-style: none;
   border: none;
@@ -660,6 +712,12 @@ body {
   cursor: inherit;
 }
 
+::placeholder {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 50%;
+}
+
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
@@ -668,7 +726,7 @@ body {
   width: 20px;
   padding: 0;
   position: absolute;
-  right: 50%;
+  left: 1%;
   top: 1%;
   z-index: 99;
 }
@@ -1310,5 +1368,50 @@ button:hover {
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
+@media (min-width: 768px) {
+  ::placeholder {
+    font-size: 100%;
+  }
+
+  .modal {
+    width: 80%;
+  }
+
+  .modalInner {
+    margin: 1rem 2rem;
+  }
+
+  .modalProjectIcon {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .modalIcon {
+    height: 96px;
+    width: 96px;
+    padding: 10px;
+    stroke: whitesmoke;
+    stroke-width: 2px;
+  }
+
+  .extendedDescription {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  .toolTipContainer {
+    width: 90%;
+  }
+
+  .extendedModal {
+    width: 90%;
+  }
+
+  .score {
+    font-size: 150%;
+    padding: 25px;
+    margin: 20px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

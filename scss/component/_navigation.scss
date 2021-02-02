@@ -12,18 +12,19 @@
 }
 
 .modal {
-  width: 80%;
+  width: 90%;
   margin: 10% auto auto;
   position: relative;
   text-align: center;
   background: rgba(149, 148, 170);
   border-radius: 5px;
   padding: 30px 20px;
+  opacity: 0.99;
   z-index: 99;
 }
 
 .modalInner {
-  margin: 1rem 2rem;
+  margin: 0.5rem 1rem;
 }
 
 .hidden {
@@ -34,15 +35,20 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
 .modalProjectIcon {
-  margin: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.modalProjectIconHover {
+  transition: 0.3s;
 }
 
 .modalProjectIconHover:hover {
   border: $white 2px solid;
+  border-style: inset;
   border-radius: 5px;
 }
 
@@ -51,7 +57,7 @@
   color: $white;
 }
 
-.modalIcon {  
+.modalIcon {
   height: 64px;
   width: 64px;
   padding: 10px;
@@ -96,50 +102,52 @@
 .modal-previous {
   position: absolute;
   left: 15px;
-  top: 50%;
+  top: 20%;
 }
 
 .modal-next {
   position: absolute;
   right: 15px;
-  top: 50%;
+  top: 20%;
 }
 
 .extendedDescription {
-  text-align: center; 
-  margin: 2rem auto; 
+  white-space: pre-wrap;
+  text-align: center;
+  margin: 0.5rem auto;
   color: $white;
-  font-family: montana-rough;
+  font-family: reross-quadratic;
   font-weight: $font-light;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0.5rem;
   border: solid 1px white;
   border-radius: 5px;
 }
 
-.toolTipContainer{
+.toolTipContainer {
   position: absolute;
-  top: 50%;  
-  width: 66%;
+  width: 95%;
   min-height: 100px;
-  }
+  padding: 0.5rem;
+}
 
-.toolTipContainer .toolTipTextPages { 
+.toolTipContainer .toolTipTextPages {
   left: 0;
- 
+
 }
 
-.toolTipContainer .toolTipTextRepo { 
-  right: 0;  
+.toolTipContainer .toolTipTextRepo {
+  right: 0;
 }
 
-.extendedModal{
-  width: 80%; 
+.extendedModal {
+  width: 95%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   margin: 0 auto;
- }
+  border-radius: 5px;
+}
+
 
 
 .extendedModal:hover .toolTipTextPages,
@@ -147,16 +155,52 @@
   visibility: visible;
 }
 
-.toolTipTextPages, .toolTipTextRepo{
+.toolTipTextPages,
+.toolTipTextRepo {
   position: absolute;
   visibility: hidden;
-  bottom: 0;
-  font-family: reross-quadratic;
-  padding: 2px; 
+  top: 0;
+  font-family: reross-quadratic, monospace;
+  padding: 2px;
   background-color: $secondary-color;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-.toolTipTextPages:hover, .toolTipTextRepo:hover{ 
-  background-color: $white; 
+.toolTipTextPages:hover,
+.toolTipTextRepo:hover {
+  background-color: $white;
+}
+
+
+.lighthouseContainer {
+  display: flex;
+  flex-flow: row wrap;
+ justify-content: center;   
+  font-family: reross-quadratic, monospace;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.lighthouseGraphicContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  color: $white;
+  font-family: reross-quadratic, monospace;
+  margin: 1rem;
+}
+
+.lighthouseText {
+  border-radius: 5px;
+  font-weight: $font-bold;
+  background-color: $secondary-color-light; 
+  margin: 1rem;
+  padding:0.5rem;
+}
+
+.score {
+  background-color: $white;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 5px;
 }

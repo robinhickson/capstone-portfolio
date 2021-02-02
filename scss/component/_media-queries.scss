@@ -6,6 +6,52 @@
 
 /* ============================================= */
 
-@media (min-width: $breakpointTablet) {};
+@media (min-width: $breakpointTablet) {
+
+    ::placeholder{       
+        font-size: 100%;       
+      }
     
-@media (min-width: $breakpointDesktop) {};
+.modal {
+    width: 80%;   
+  }
+  
+  .modalInner {
+    margin: 1rem 2rem;
+  }
+  
+  
+  .modalProjectIcon {
+    margin: 1rem;
+    padding: 1rem;
+  
+  }
+  
+   .modalIcon {  
+    height: 96px;
+    width: 96px;
+    padding: 10px;
+    stroke: $white;
+    stroke-width: 2px;  }
+  
+ 
+  .extendedDescription {    
+    margin: 1rem auto;     
+    padding: 1rem;  
+  }
+  
+  .toolTipContainer{      
+    width: 90%;  
+    }
+ 
+  .extendedModal{
+    width: 90%; 
+     } 
+       
+  .score{   
+    font-size: 150%;    
+    padding: 25px;
+    margin: 20px;
+  }
+};
+    
