@@ -164,7 +164,6 @@ let firstwebsite = new Project("firstwebsite", "Portfolio",
 
     The best part? I like the responsiveness and accessibility, especially when achieved without any added Javascript.
     
-    Note that the Lighthouse scores are relative to the index page.
     `,
     ['responsive', 'html', 'css', 'css3', 'photo', 'image', 'flexbox', 'accessibility', 'gallery'], {
         performance: 93,
@@ -409,7 +408,7 @@ let formatDetailedProject = function (project) {
     //add extended description for each project
     let descriptionText = document.createElement("h4");
     descriptionText.setAttribute("class", "extendedDescription");
-    descriptionText.setAttribute("style", "border: solid 1px " + selectedProject.colorCode);
+    descriptionText.setAttribute("style", "border: solid 2px " + selectedProject.colorCode);
     descriptionText.textContent = selectedProject.extended;
 
     //add tooltips for hidden links
@@ -437,9 +436,10 @@ let formatDetailedProject = function (project) {
 
     let lighthouseContainer = document.createElement("div");
     lighthouseContainer.setAttribute("class", "lighthouseContainer");
-    lighthouseContainer.setAttribute("style", "color:" + selectedProject.colorCode);
+  
     let lighthouseText = document.createElement("span");
     lighthouseText.setAttribute("class", "lighthouseText");
+    lighthouseText.setAttribute("style", "border: solid 1px " + selectedProject.colorCode);
     lighthouseText.textContent = "Google Lighthouse Scores (Performance, Accessibility, Best Practices, SEO)";
     lighthouseContainer.appendChild(lighthouseText);
 

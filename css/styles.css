@@ -408,7 +408,7 @@ body {
   font-family: "Liana";
   font-size: 1rem;
   color: #ca8d8d;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.1em;
 }
 
 .copyright {
@@ -417,17 +417,22 @@ body {
   color: #ca8d8d;
 }
 
-.email {
-  display: block;
-  font-family: reross-quadratic, monospace;
-  color: black;
-  font-weight: bold;
-  background-color: whitesmoke;
-  padding: 5px;
-  padding-left: 4em;
-  padding-right: 4em;
-  margin-bottom: 2px;
+.contact {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-end;
   border-radius: 5px;
+  width: 100%;
+}
+
+.google_icon {
+  width: 1rem;
+}
+
+.gmail_icon {
+  width: 1.4rem;
+  height: 1rem;
 }
 
 /* ============================================= */
@@ -611,7 +616,7 @@ body {
   font-family: reross-quadratic;
   font-weight: 400;
   padding: 0.5rem;
-  border: solid 1px white;
+  border: solid 2px;
   border-radius: 5px;
 }
 
@@ -680,7 +685,7 @@ body {
 
 .lighthouseText {
   border-radius: 5px;
-  font-weight: 700;
+  color: whitesmoke;
   background-color: rgba(221, 221, 221, 0.6);
   margin: 1rem;
   padding: 0.5rem;
